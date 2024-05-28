@@ -12,6 +12,7 @@ import Banner from "../Pages/Banner/Banner";
 import Register from "../Sign/Register";
 import Login from "../Sign/Login";
 import PrivateRoute from "./PrivateRoute.jsx";
+import ProductDetails from "../Pages/Product/ProductDetails.jsx";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
             {
                 path: "product",
                 element:<Products/>
+            },
+            {
+                path: "/products/:id",
+                element: <ProductDetails />,
+                loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
             },
             {
                 path: "contact",
