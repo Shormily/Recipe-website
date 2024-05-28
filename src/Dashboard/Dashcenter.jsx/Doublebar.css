@@ -1,0 +1,31 @@
+.piedouble{
+    background-color: #f1a241fd;
+    width: 500px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    /* background: linear-gradient(to right, rgb(#e2b072fd), rgb(4, 34, 111)); */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.brushbr{
+    background-color: #f1a241fd;
+    border-radius: 15px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background: #f1a241fd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}

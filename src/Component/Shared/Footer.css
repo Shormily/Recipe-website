@@ -1,0 +1,33 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+.story-section {
+    width: 100%;
+    height: 28.125rem;
+    background-image: linear-gradient(rgba(1, 7, 28, 0.63), rgba(0, 1, 13, 0.423)),
+        url(/image.png);
+    background-attachment:scroll;
+    /* background-position: 0 71.9125px; */
+    padding: 4.37rem 0;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+/* Footer Section */
+.icn {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    /* background-color: rgb(46, 43, 40); */
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #f0f2fa;
+    transition: all 0.5s ease;
+}
+.icn:hover {
+    color: #f0f2fa;
+    background-color: #0b0707;
+    /* background: linear-gradient(97deg, rgb(19, 1, 27) 0%, rgb(18, 9, 15) 72%, rgb(13, 6, 7) 98%); */
+}

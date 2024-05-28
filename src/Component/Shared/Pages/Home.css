@@ -1,0 +1,64 @@
+.flex-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+   
+ }
+
+ @media (max-width: 767px) {
+    .flex-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (max-width: 1018px) {
+    .flex-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (max-width: 1170px) {
+    .flex-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (max-width: 1590px) {
+    .flex-cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+  }
+  @media (max-width: 1116px) {
+    .flex-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  @media (max-width: 650px) {
+    .flex-cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+  }
+
+  
+.story-sectioner{
+  /* width:100%; */
+  /* height: 28.125rem;
+  background-image:linear-gradient(rgba(1, 4, 14, 0.63),rgba(219, 189, 92, 0.336)), url("https://i.ibb.co/kScyXR1/img18.jpg") ;
+  background-attachment: fixed;
+  background-position: 0 71.9125px;
+  padding: 4.37rem 0;
+  background-repeat:no-repeat;
+  background-size: cover; */
+  /* padding-top: 100px; */
+  width: 100%;
+    height: auto;
+    background-image:linear-gradient(rgba(1, 4, 14, 0.433),rgba(219, 189, 92, 0.347)),url(https://i.ibb.co/kScyXR1/img18.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 60% 60%;
+    padding: 4.37rem 0;
+  
+}

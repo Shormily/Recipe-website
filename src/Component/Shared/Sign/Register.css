@@ -1,0 +1,26 @@
+.input {
+    /* width: 100%; */
+    height: 50px;
+    line-height: 40px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #dfa15655;
+    color: #0d0c22;
+    transition: 0.5s ease;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: black;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: #eba34b55;
+    background-color: #fff;
+    box-shadow: 0 0 0 5px #df9c4b55;
+}

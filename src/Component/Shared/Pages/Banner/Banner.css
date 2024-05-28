@@ -1,0 +1,44 @@
+.video {
+    position: relative;
+}
+.banner-text {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+}
+.video::before {
+    content: "";
+
+    width: 100%;
+    height: auto;
+    background-color: rgba(2, 13, 73, 0.582);
+}
+.video-container {
+    max-width: 100% !important;
+    vertical-align: baseline !important;
+}
+
+
+.review-wrapper{
+    /* width: 100%;
+    height: auto;
+    background-image:url(../Image/fru.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-sizing: cover;
+    background-position: 0 71.9125px;
+    padding: 4.37rem 0; */
+
+    width: 100%;
+    height: 300px;
+    background-image:url(https://i.ibb.co/kScyXR1/img18.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    padding: 4.37rem 0;
+}
+
+.imgs{
+    width: 100%;
+    height: 400px;
+    
+}

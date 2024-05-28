@@ -1,0 +1,192 @@
+.sidebr{
+  box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 40px;
+}
+
+.cardesh {
+    width: 350px;
+    height: 150px;
+    /* background: rgb(17, 4, 134); */
+    border-radius: 15px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background: #f1a241fd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .polargrid{
+    width: 450px;
+    height: 400px;
+    /* background: rgb(17, 4, 134); */
+    border-radius: 15px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white !important;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background: #f1a241fd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  .barchart{
+    width: 450px;
+    height: 550px;
+    background: #f1a241fd;
+    border-radius: 15px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background:#f1a241fd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  .linechat{
+    /* width: ;
+    height: ; */
+    /* background: rgb(17, 4, 134); */
+    border-radius: 15px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    /* position: relative;
+    flex-direction: column; */
+    background: #f1a241fd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* .cardesh:hover {
+    box-shadow: rgb(0,0,0) 10px 20px 60px ,rgb(0,0,0) -5px 0px 250px;
+  } */
+  .dashbtn:hover {
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 30px;
+  }
+
+  .dashbtn {
+    width: 320px;
+    height: 60px;
+    background: rgb(17, 4, 134);
+    border-radius: 27px;
+    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background: #f1a241fd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  /* Dash icon */
+
+  .Dashicn{
+    display: inline-block;
+    height:35px;
+    width: 35px;
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height:35px;
+    border-radius: 50%;
+    background: linear-gradient(#f9e577f8,rgba(248, 236, 146, 0.993));
+    transition:all 0.5s ease;
+    color: #1a1c24;
+}
+.Dashicn:hover{
+    color: #f14141;
+    /* background: linear-gradient(#23138af8,rgba(42, 149, 255, 0.837)); */
+}
+
+.parcent{
+  display: inline-block;
+    height:25px;
+    width: 50px;
+    margin:0 10px 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    /* background-color:rgba(243, 155, 111, 0.784); */
+    transition:all 0.5s ease;
+    color: #fff; 
+    font-size: 10px;
+}
+
+
+/* pie chart */
+
+.chartMenu {
+  width: 100vw;
+  height: 40px;
+  background: #1A1A1A;
+  /* color: #d7903afd; */
+}
+.chartMenu p {
+  padding: 10px;
+  font-size: 20px;
+}
+.chartCard {
+  width: 100vw;
+  height: calc(100vh - 40px);
+  /* background: rgba(54, 162, 235, 0.2); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chartBox {
+  width: 700px;
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 3px rgba(54, 162, 235, 1);
+  background: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+ /* Responsive layout - makes a one column layout instead of a two-column layout */
+ 
+ @media (max-width: 1440px) {
+   .flex-container {
+    flex-direction: row;
+    grid-template-columns: repeat(2,1fr);
+   }
+ }
+ @media (max-width: 800px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
+ @media (max-width: 700px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
+ @media (max-width: 600px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
+ @media (max-width: 500px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
+ @media (max-width: 400px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
