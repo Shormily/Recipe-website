@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import RecipeRow from "./RecipeRow";
 
 const ManageAllRecipe = () => {
-    const [recipes, setRescipes] = useState();
+  const [recipes, setRescipes] = useState();
+  const [products, setProducts] = useState([]);
     useEffect(() => {
         async function load() {
             const data = await axios.get('http://localhost:3000/recipes')
@@ -14,6 +15,9 @@ const ManageAllRecipe = () => {
         }
         load();
     }, [])
+    const handleDeleteProduct = (id) => {
+      setProducts(recipes.filter((recipe) => recipe.id !== id));
+    };
    
    
     return (
@@ -43,7 +47,7 @@ const ManageAllRecipe = () => {
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
                             {recipes?.map((recipe) => (
-                                <RecipeRow key={recipe?.id} recipe={recipe} />
+                              <RecipeRow key={recipe?.id} recipe={recipe} onDelete={handleDeleteProduct} />
                             ))}
                         </tbody>
                     </table>
