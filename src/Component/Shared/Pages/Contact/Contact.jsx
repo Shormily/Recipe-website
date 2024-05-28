@@ -1,14 +1,17 @@
+import Footer from "../../Footer";
+import Naves from "../../Navbars/Naves";
 
 const Contact = () => {
-    return (
-        <>
-        <h1 className="text-center font-bold text-4xl py-8">Contact Us</h1>
-       
-             <form
-      
+  return (
+    <>
+      <Naves />
+      <h1 className="text-center font-bold text-4xl py-8">Contact Us</h1>
+
+      <form
+
       >
         <div id="contact" className=" max-w-[1240px] m-auto">
-         
+
 
           <div className="lg:col-span-2 md:col-span-2 mx-3    animate__animated animate__fadeInRight">
             <div className="flex gap-4">
@@ -76,13 +79,13 @@ const Contact = () => {
               />
               <div className="flex mb-8 mt-4  m-auto ">
                 <input
-                  className="text-white bg-gradient-to-br  from-indigo-900 to-blue-900 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-900 dark:focus:ring-blue-900 font-semibold rounded-sm text-sm px-5 py-2.5 text-center mb-2"
+                  className="text-white bg-[#7d531ffd] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-900 dark:focus:ring-blue-900 font-semibold rounded-sm text-sm px-5 py-2.5 text-center mb-2"
                   type="submit"
                   name="submit"
                   style={{
                     paddingRight: "55px",
                     paddingLeft: "55px",
-                    backgroundColor: "#106AC3",
+                    backgroundColor: "#7d531ffd",
                     color: "#fff",
                   }}
                 />
@@ -91,8 +94,9 @@ const Contact = () => {
           </div>
         </div>
       </form>
-        </>
-    );
+      <Footer/>
+    </>
+  );
 };
 
 export default Contact;

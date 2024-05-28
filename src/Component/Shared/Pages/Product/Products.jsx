@@ -1,9 +1,13 @@
+import Footer from "../../Footer";
+import Naves from "../../Navbars/Naves";
 import Home from "../Home";
 
 const Products = () => {
     return (
         <>
-         <Home/>
+            <Naves/>
+            <Home />
+            <Footer/>
         </>
     );
 };

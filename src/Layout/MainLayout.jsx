@@ -5,9 +5,9 @@ import Naves from '../Component/Shared/Navbars/Naves';
 const MainLayout = () => {
     return (
         <>
-           <Naves/>
+           {/* <Naves/> */}
             <Outlet/>
-           <Footer/> 
+           {/* <Footer/>  */}
         </>
     );
 };

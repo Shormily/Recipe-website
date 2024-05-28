@@ -5,6 +5,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase/firebase.config";
 import GoogleLogIn from "../Auth/GoogleLogIn";
 import Swal from "sweetalert2";
+import Naves from "../Navbars/Naves";
+import Footer from "../Footer";
 
 export default function Login() {
   const [user, loading] = useAuthState(auth);
@@ -29,7 +31,9 @@ export default function Login() {
   }
 }, [user, loading, navigate, from]);
   return (
-    <div className="py-5 pb-5">
+    <>
+      <Naves/>
+       <div className="py-5 pb-5">
       <div className=" py-5">
       <h1 className="text-center font-bold text-3xl py-4">Register Now</h1>
         <div className="flex justify-center">
@@ -82,7 +86,10 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      <Footer/>
+    </>
+   
   );
 }
 
