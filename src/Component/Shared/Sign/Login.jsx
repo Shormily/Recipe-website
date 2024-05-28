@@ -32,13 +32,13 @@ import Swal from "sweetalert2";
         if (user) {
             // setUser(user);
             navigate(from, { replace: true });
-            Swal.fire({
-                position: "top-center",
-                icon: "success",
-                title: "Successfully SignIn",
-                showConfirmButton: false,
-                timer: 3000,
-              });
+            // Swal.fire({
+            //     position: "top-center",
+            //     icon: "success",
+            //     title: "Successfully SignIn",
+            //     showConfirmButton: false,
+            //     timer: 3000,
+            //   });
            
           
       }
@@ -50,7 +50,7 @@ import Swal from "sweetalert2";
           <div className="flex justify-center">
            
             <div className="card shrink-0 w-full max-w-md shadow-2xl py-3 pt-3 bg-base-100 px-4">
-              <form className="card-body">
+              <form className="card-body" onSubmit={handleSubmit}>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text ">Email</span>

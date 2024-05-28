@@ -17,13 +17,13 @@ export default function Login() {
     if (user) {
         // setUser(user);
         navigate(from, { replace: true });
-        Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: "Successfully SignIn",
-            showConfirmButton: false,
-            timer: 3000,
-          });
+        // Swal.fire({
+        //     position: "top-center",
+        //     icon: "success",
+        //     title: "Successfully SignIn",
+        //     showConfirmButton: false,
+        //     timer: 3000,
+        //   });
        
       
   }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
 const AddRecipe = () => {
@@ -36,7 +37,15 @@ const AddRecipe = () => {
       description,
     };
 
-    await axios.post("http://localhost:3000/recipes", recipeData);
+    await axios.post("http://localhost:3000/recipes", recipeData)
+    .then((response) => {
+  
+      toast.success("Recipe added successfully")
+    
+  })
+  .catch((error) => {
+    toast.error('Failed to add recipe');
+  });
   };
     return (
         <>

@@ -63,7 +63,7 @@ const router = createBrowserRouter([
                     {
                         path: "manage-recipes",
                         element: <ManageAllRecipe />
-                        // loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
+                      
                     },
                     {
                         path: "add-recipes",
@@ -71,7 +71,8 @@ const router = createBrowserRouter([
                     },
                     {
                         path: "edit-recipe/:id",
-                        element:<EditRecipe/>
+                        element: <EditRecipe />,
+                        loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
                     },
                 
                 ],
