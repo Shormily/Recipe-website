@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
-import Swal from "sweetalert2";
+import toast, { Toaster } from "react-hot-toast";
+
 
 const AddRecipe = () => {
     const [categories, setCategories] = useState();
@@ -36,8 +36,8 @@ const AddRecipe = () => {
       category,
       description,
     };
-
     await axios.post("http://localhost:3000/recipes", recipeData)
+      
     .then((response) => {
   
       toast.success("Recipe added successfully")
@@ -47,10 +47,14 @@ const AddRecipe = () => {
     toast.error('Failed to add recipe');
   });
   };
+
+ 
     return (
-        <>
+      <>
+        <Toaster/>
            <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
-      <h1 className="text-4xl mb-4 text-center mt-24">Add Recipe</h1>
+          <h1 className="text-4xl mb-4 text-center mt-24">Add Recipe </h1>
+         
       <form onSubmit={handleCreateRecipe} className="w-full">
         <div className="mb-4">
           <label htmlFor="">Id </label>
@@ -84,12 +88,13 @@ const AddRecipe = () => {
           <textarea name="description" className="w-full py-3 px-5 border" />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 flex justify-between">
           <input
             type="submit"
             value={"Add Recipe"}
             className="w-full btn py-3 px-5 border btn-neutral"
           />
+          
         </div>
           </form>
           

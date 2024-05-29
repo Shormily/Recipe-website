@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditRecipe = () => {
     const recipe = useLoaderData();
     console.log(recipe)
+
     // const { id } = useParams()
     const [categories, setCategories] = useState();
     const [recipeDetails, setRecipeDetails] = useState();
@@ -15,7 +18,10 @@ const EditRecipe = () => {
     const [id, setId] = useState(recipe.id);
     const [description, setDescription] = useState(recipe.description);
     const [image, setImage] = useState(recipe.image);
-
+    // Navigate system
+    const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/dashboard/manage-recipes";
+    // Navigate end
 
     useEffect(() => {
         async function load() {
@@ -55,13 +61,66 @@ const EditRecipe = () => {
             },
             body: JSON.stringify(recipeData),
         })
-            .then((res) => res.json())
+            .then((res) => {
+                
+                res.json(
+                    Swal.fire({
+                    title: "SuccessFully Edited",
+                    icon: "success",
+                    color: "#14532d",
+                    confirmButtonColor: "#14532d",
+                    confirmButtonText:"Okey",
+                    showClass: {
+                      popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                      `
+                    },
+                    hideClass: {
+                      popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                      `
+                    }
+                    })
+                )
+                
+                navigate(from, { replace: true });
+                
+            })
             .then((data) => console.log(data));
     };
+
+    const Update = () => {
+        Swal.fire({
+            title: "SuccessFully Update",
+            icon: "success",
+            color: "#14532d",
+            confirmButtonColor: "#14532d",
+            confirmButtonText:"Okey",
+            showClass: {
+              popup: `
+                animate__animated
+                animate__fadeInUp
+                animate__faster
+              `
+            },
+            hideClass: {
+              popup: `
+                animate__animated
+                animate__fadeOutDown
+                animate__faster
+              `
+            }
+            })
+    }
     return (
         <>
+            <Toaster/>
             <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
-                <h1 className="text-4xl mb-4 text-center mt-24">Edit Recipe</h1>
+                <h1 className="text-4xl mb-4 text-center mt-24">Edit Recipe Or Update Recipe </h1>
                 <form onSubmit={handleCreateRecipe} className="w-full">
                     <div className="mb-4">
                         <label htmlFor="">Id </label>
@@ -109,13 +168,20 @@ const EditRecipe = () => {
                         <textarea onChange={(e) => setDescription(e.target.value)} defaultValue={recipeDetails?.description} name="description" className="w-full py-3 px-5 border" />
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-4 flex justify-between gap-12">
                         <input
                             type="submit"
                             value={"Add Recipe"}
                             className="w-full btn py-3 px-5 border btn-neutral"
                         />
+                         <input
+                            type="submit"
+                            value={"Update Recipe"}
+                            className="w-full btn py-3 px-5 border btn-neutral"
+                            onClick={Update}
+                        />
                     </div>
+
                 </form>
             </div>
         </>

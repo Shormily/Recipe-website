@@ -1,9 +1,9 @@
 .piedouble{
-    background-color: #f1a241fd;
+    background-color: #14532d;
     width: 500px;
     height: 350px;
     border-radius: 15px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white;
     justify-content: center;
@@ -16,15 +16,15 @@
 }
 
 .brushbr{
-    background-color: #f1a241fd;
+    background-color: #14532d;
     border-radius: 15px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+    box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white;
     justify-content: center;
     position: relative;
     flex-direction: column;
-    background: #f1a241fd;
+    background:#14532d;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;

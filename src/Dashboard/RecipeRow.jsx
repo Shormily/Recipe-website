@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { useState } from "react";
+// import toast, { Toaster } from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const RecipeRow = ({ recipe ,onDelete }) => {
     // const recipe = useLoaderData();
@@ -16,12 +18,21 @@ const RecipeRow = ({ recipe ,onDelete }) => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Order Delete Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 onDelete(id);
+                // toast.success("Order Delete Successfully")
             });
     };
     return (
 
         <tr>
+           
             <td className="px-6 py-4 whitespace-no-wrap">
                 <div className="text-md leading-5 text-gray-900">
                     {recipe?.id}

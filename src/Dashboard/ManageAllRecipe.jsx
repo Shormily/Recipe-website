@@ -5,6 +5,7 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { GiRingBox } from "react-icons/gi";
 import { LiaRupeeSignSolid } from "react-icons/lia"
 import RecipeRow from "./RecipeRow";
+import { Toaster } from "react-hot-toast";
 
 const ManageAllRecipe = () => {
   const [recipes, setRescipes] = useState();
@@ -70,6 +71,7 @@ const ManageAllRecipe = () => {
         <div className=" px-5 w-full">
           <div className="overflow-x-auto  w-full shadow-lg">
             {/* <h1 className="text-[#002147] text-4xl pt-12 pb-6">Manage All Orders</h1> */}
+            <Toaster/>
             <table className="min-w-full divide-y divide-gray-200  w-full">
               <thead>
                 <tr>
@@ -94,6 +96,7 @@ const ManageAllRecipe = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
+                
                 {recipes?.map((recipe) => (
                   <RecipeRow key={recipe?.id} recipe={recipe} onDelete={handleDeleteProduct} />
                 ))}

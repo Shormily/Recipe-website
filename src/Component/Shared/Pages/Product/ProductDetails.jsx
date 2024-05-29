@@ -1,4 +1,6 @@
 import { useLoaderData } from "react-router-dom";
+import Naves from "../../Navbars/Naves";
+import Footer from "../../Footer";
 
 const ProductDetails = () => {
     const recipe = useLoaderData();
@@ -6,6 +8,7 @@ const ProductDetails = () => {
     const { title,image,price,category,pragraph } = recipe;
     return (
         <>
+            <Naves/>
             <div className="justify-center items-center m-auto flex max-w-[1200px] py-12">
             <img className="p-2 shadow-lg bg-gray-100" src={image} alt="product image" />
                 </div>
@@ -16,7 +19,7 @@ const ProductDetails = () => {
       <h3 className="text-xl font-semibold">{category}</h3>
       <p className="text-lg font-medium  m-auto text-justify max-w-[1200px] py-12 pb-12">{pragraph}</p></div>
       
-   
+   <Footer/>
         </>
     );
 };

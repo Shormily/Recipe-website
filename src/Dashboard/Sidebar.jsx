@@ -43,7 +43,7 @@ const Sidebar = () => {
     const [open, setOpen] = useState(true);
     return (
         <>
-            <div className="dash-design bg-[#f1a241fd] sidebr banner-text overflow-x-auto h-full">
+            <div className="dash-design bg-[#14532d] sidebr banner-text overflow-x-auto h-full">
 
                 <div className="flex  gap-6   h-full ">
 

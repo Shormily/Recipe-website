@@ -46,7 +46,7 @@ const Banner = () => {
               />
             </p>
             <h1 className=" justify-center items-center m-auto pt-5 ">shangrila Cafe & Restaurant, & Awesome Coffee,  Italian Pizza With Cherry<br /> Tomatoes and Green Basil, With special breakfast  dinner<br /> and lunch awesome Offers.</h1>
-            <div className="cursor-pointer"><button className="bg-[#7d531ffd] px-8  cursor-pointer  py-4 my-10 text-sm font-bold text-[#fff] hover:bg-[#000] hover:text-[#fff]">
+            <div className="cursor-pointer"><button className="bg-[#14532d] px-8  cursor-pointer  py-4 my-10 text-sm font-bold text-[#fff] hover:bg-[#000] hover:text-[#fff]">
               MORE ABOUT US
             </button></div>
 

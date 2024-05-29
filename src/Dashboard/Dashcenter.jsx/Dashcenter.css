@@ -1,5 +1,5 @@
 .sidebr{
-  box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 40px;
+  box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
 }
 
 .cardesh {
@@ -7,13 +7,13 @@
     height: 150px;
     /* background: rgb(17, 4, 134); */
     border-radius: 15px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white;
     justify-content: center;
     position: relative;
     flex-direction: column;
-    background: #f1a241fd;
+    background:#14532d;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
@@ -24,13 +24,13 @@
     height: 400px;
     /* background: rgb(17, 4, 134); */
     border-radius: 15px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white !important;
     justify-content: center;
     position: relative;
     flex-direction: column;
-    background: #f1a241fd;
+    background:#14532d;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
@@ -38,15 +38,15 @@
   .barchart{
     width: 450px;
     height: 550px;
-    background: #f1a241fd;
+    background:#14532d;
     border-radius: 15px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white;
     justify-content: center;
     position: relative;
     flex-direction: column;
-    background:#f1a241fd;
+    background:#14532d;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
@@ -56,13 +56,13 @@
     height: ; */
     /* background: rgb(17, 4, 134); */
     border-radius: 15px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white;
     justify-content: center;
     /* position: relative;
     flex-direction: column; */
-    background: #f1a241fd;
+    background:#14532d;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
@@ -80,13 +80,13 @@
     height: 60px;
     background: rgb(17, 4, 134);
     border-radius: 27px;
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 10px;
+     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
     display: flex;
     color: white;
     justify-content: center;
     position: relative;
     flex-direction: column;
-    background: #f1a241fd;
+    background:#14532d;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     overflow: hidden;

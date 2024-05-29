@@ -45,7 +45,7 @@ const About = () => {
                     <p className="text-center justify-center m-auto items-center text-5xl text-white font-bold">ENJOY TOGETHER</p>
 
                     <div className=" max-w-[1440px] m-auto flex justify-end items-end ">
-                        <p className="bg-[#7d531ffd] p-1 ">
+                        <p className="bg-[#14532d] p-1 ">
                             <p className="w-96 text-white border p-8 text-[15px]">
                                 <p className="text-2xl font-semibold py-2">THE PLACE</p>
                                 Unique experience for the Holidays at Monde. Proina nibhel velit auctor aliquet. Aenean sollicit udine oremual biben dum auctor, nisi elit consequat ipsum, nec sagittis am sem nibhad elit. Duis sed odio sit amet nibvupususa amet uris. Morbi accumsan ipsum vitamec tellus bodio tincwa idunt auctor a ornare odio.</p></p>

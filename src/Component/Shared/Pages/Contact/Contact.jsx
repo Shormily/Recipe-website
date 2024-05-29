@@ -79,7 +79,7 @@ const Contact = () => {
               />
               <div className="flex mb-8 mt-4  m-auto ">
                 <input
-                  className="text-white bg-[#7d531ffd] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-900 dark:focus:ring-blue-900 font-semibold rounded-sm text-sm px-5 py-2.5 text-center mb-2"
+                  className="text-white bg-[#14532d] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-900 dark:focus:ring-blue-900 font-semibold rounded-sm text-sm px-5 py-2.5 text-center mb-2"
                   type="submit"
                   name="submit"
                   style={{
@@ -94,7 +94,7 @@ const Contact = () => {
           </div>
         </div>
       </form>
-      <Footer/>
+      <Footer />
     </>
   );
 };
