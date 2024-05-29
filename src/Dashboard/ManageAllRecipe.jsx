@@ -27,10 +27,10 @@ const ManageAllRecipe = () => {
 
   return (
     <>
-      <div className=" px-8 py-12">
-        <p className="font-bold text-3xl py-2">Overview</p>
-        <div className="grid lg:grid-cols-3 gap-24">
-          <div className=" py-3 px-4  w-full   text-white bg-orange-400 shadow-lg rounded-3xl">
+      <div className=" px-8 pt-5 pb-12">
+        <p className="font-bold text-4xl py-2 pb-7">Overview</p>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-24">
+          <div className=" py-5 pb-5 px-8  w-full   text-white bg-[#14532d] shadow-lg rounded-3xl">
             <p className="flex gap-2 px-3">
 
               <FaHandHoldingHand className="bg-[#ffffff5b] rounded-full w-10 h-10 py-2 px-2" size={30} /> <span className="pt-2">Product Sales</span></p>
@@ -44,7 +44,7 @@ const ManageAllRecipe = () => {
             </div>
           </div>
 
-          <div className=" py-3 px-4 text-white  rounded-2xl bg-[#f87448]">
+          <div className=" py-5 px-4 text-white  rounded-2xl bg-[#14532d]">
             <p className="flex gap-2 px-3">
 
               <FaHandHoldingUsd className="bg-[#a3e635] text-white rounded-full w-10 h-10 py-2 px-2" size={30} /> <span className="pt-2">Total Income</span></p>
@@ -52,7 +52,7 @@ const ManageAllRecipe = () => {
             <p className='text-3xl pt-3 items-center justify-center flex px-4'> <LiaRupeeSignSolid size={25} />355,000</p>
           </div>
 
-          <div className=" py-3 px-4 text-white   rounded-2xl bg-[#f1a241fd]">
+          <div className=" py-5 px-8 pb-3 text-white   rounded-2xl bg-[#14532d]">
             <p className="flex gap-2 px-3">
               <GiRingBox className="bg-[#38bdf8] text-white rounded-full w-10 h-10 py-2 px-2" size={30} /> <span className="pt-2">Total Products</span></p>
             <div className="flex justify-between gap-20">
@@ -63,6 +63,13 @@ const ManageAllRecipe = () => {
               <p className='flex-between'>Delivery </p>
               <p className='flex-between'>200 </p>
             </div></div>
+            <div className=" py-5 px-5 text-white  rounded-2xl bg-[#14532d]">
+            <p className="flex gap-2 px-3">
+
+              <FaHandHoldingUsd className="bg-[#a3e635] text-white rounded-full w-10 h-10 py-2 px-2" size={30} /> <span className="pt-2">Total Income</span></p>
+
+            <p className='text-3xl pt-3 items-center justify-center flex px-4'> <LiaRupeeSignSolid size={25} />355,000</p>
+          </div>
 
 
         </div>
@@ -75,22 +82,22 @@ const ManageAllRecipe = () => {
             <table className="min-w-full divide-y divide-gray-200  w-full">
               <thead>
                 <tr>
-                  <th className="px-6 py-3 bg-[#f1a241fd] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th className="px-6 py-3 bg-[#14532d] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                     ID
                   </th>
-                  <th className="px-6 py-3 bg-[#f1a241fd] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th className="px-6 py-3 bg-[#14532d] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                     Title
                   </th>
-                  <th className="px-6 py-3 bg-[#f1a241fd] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th className="px-6 py-3 bg-[#14532d] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                     Price
                   </th>
-                  <th className="px-6 py-3 bg-[#f1a241fd] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th className="px-6 py-3 bg-[#14532d] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                     img
                   </th>
-                  <th className="px-6 py-3 bg-[#f1a241fd] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th className="px-6 py-3 bg-[#14532d] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                     Category
                   </th>
-                  <th className="px-6 py-3 bg-[#f1a241fd] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
+                  <th className="px-6 py-3 bg-[#14532d] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                     Action
                   </th>
                 </tr>

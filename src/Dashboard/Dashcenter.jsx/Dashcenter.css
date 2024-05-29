@@ -1,13 +1,13 @@
-.sidebr{
-  box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
-}
+/* .sidebr{
+  box-shadow: rgb(24, 65, 1) 2px 5px 10px ,rgb(24, 65, 1) -5px  0px 5px;
+} */
 
 .cardesh {
     width: 350px;
     height: 150px;
     /* background: rgb(17, 4, 134); */
     border-radius: 15px;
-     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+     /* box-shadow: rgb(24, 65, 1) 2px 5px 10px ,rgb(24, 65, 1) -5px  0px 5px; */
     display: flex;
     color: white;
     justify-content: center;
@@ -24,7 +24,7 @@
     height: 400px;
     /* background: rgb(17, 4, 134); */
     border-radius: 15px;
-     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+     /* box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px; */
     display: flex;
     color: white !important;
     justify-content: center;
@@ -40,7 +40,7 @@
     height: 550px;
     background:#14532d;
     border-radius: 15px;
-     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+     /* box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px; */
     display: flex;
     color: white;
     justify-content: center;
@@ -56,7 +56,7 @@
     height: ; */
     /* background: rgb(17, 4, 134); */
     border-radius: 15px;
-     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+     /* box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px; */
     display: flex;
     color: white;
     justify-content: center;
@@ -68,11 +68,11 @@
     overflow: hidden;
   }
   
-  /* .cardesh:hover {
-    box-shadow: rgb(0,0,0) 10px 20px 60px ,rgb(0,0,0) -5px 0px 250px;
-  } */
+  .cardesh:hover {
+    box-shadow: none;
+  }
   .dashbtn:hover {
-    box-shadow: rgba(198, 111, 17, 0.507) 2px 5px 10px ,rgba(236, 140, 23, 0.7) -5px 0px 30px;
+    box-shadow:none;
   }
 
   .dashbtn {
@@ -80,7 +80,7 @@
     height: 60px;
     background: rgb(17, 4, 134);
     border-radius: 27px;
-     box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+    /* box-shadow: rgb(24, 65, 1) 2px 5px 10px ,rgb(24, 65, 1) -5px  0px 5px; */
     display: flex;
     color: white;
     justify-content: center;

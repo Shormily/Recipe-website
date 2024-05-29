@@ -3,7 +3,7 @@
     width: 500px;
     height: 350px;
     border-radius: 15px;
-    box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+    /* box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px; */
     display: flex;
     color: white;
     justify-content: center;
@@ -18,7 +18,7 @@
 .brushbr{
     background-color: #14532d;
     border-radius: 15px;
-    box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px;
+    /* box-shadow: rgba(1, 94, 21, 0.527) 2px 5px 10px ,rgba(1, 94, 21, 0.527) -5px 0px 20px; */
     display: flex;
     color: white;
     justify-content: center;

@@ -13,6 +13,7 @@ import Register from "../Sign/Register";
 import Login from "../Sign/Login";
 import PrivateRoute from "./PrivateRoute.jsx";
 import ProductDetails from "../Pages/Product/ProductDetails.jsx";
+import Update from "../../../Dashboard/Update.jsx";
 
 const router = createBrowserRouter([
     {
@@ -72,6 +73,11 @@ const router = createBrowserRouter([
                     {
                         path: "edit-recipe/:id",
                         element: <EditRecipe />,
+                        loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
+                    },
+                    {
+                        path: "update/:id",
+                        element: <Update />,
                         loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
                     },
                 

@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const EditRecipe = () => {
+const Update = () => {
     const recipe = useLoaderData();
     console.log(recipe)
 
@@ -65,7 +65,7 @@ const EditRecipe = () => {
                 
                 res.json(
                     Swal.fire({
-                    title: "SuccessFully Edited",
+                    title: "SuccessFully Update",
                     icon: "success",
                     color: "#14532d",
                     confirmButtonColor: "#14532d",
@@ -98,7 +98,7 @@ const EditRecipe = () => {
         <>
             <Toaster/>
             <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
-                <h1 className="text-4xl mb-4 text-center mt-24">Edit Recipe</h1>
+                <h1 className="text-4xl mb-4 text-center mt-24"> Update Recipe </h1>
                 <form onSubmit={handleCreateRecipe} className="w-full">
                     <div className="mb-4">
                         <label htmlFor="">Id </label>
@@ -146,13 +146,13 @@ const EditRecipe = () => {
                         <textarea onChange={(e) => setDescription(e.target.value)} defaultValue={recipeDetails?.description} name="description" className="w-full py-3 px-5 border" />
                     </div>
 
-                    <div className="mb-4 ">
+                    <div className="mb-4 flex justify-between gap-12">
                         <input
                             type="submit"
-                            value={"Add Recipe"}
+                            value={"Update Item"}
                             className="w-full btn py-3 px-5 border btn-neutral"
                         />
-                        
+                       
                     </div>
 
                 </form>
@@ -161,4 +161,4 @@ const EditRecipe = () => {
     );
 };
 
-export default EditRecipe;
+export default Update;

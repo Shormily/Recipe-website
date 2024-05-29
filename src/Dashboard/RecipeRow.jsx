@@ -65,13 +65,16 @@ const RecipeRow = ({ recipe ,onDelete }) => {
             </td>
             <td className="px-6 py-4 whitespace-no-wrap flex  mt-6">
                 <div className="text-sm leading-5 text-gray-900">
-                    <Link to={`/dashboard/edit-recipe/${recipe?.id}`} type="button" className="text-gray-900 font-medium  bg-orange-400 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
+                    <Link to={`/dashboard/edit-recipe/${recipe?.id}`} type="button" className="text-white font-medium  bg-[#03712f] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
                         Edit
                     </Link>
-                    <button onClick={handleDelete} type="button" className="text-gray-900 font-medium  bg-orange-300 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
+                    <button onClick={handleDelete} type="button" className="text-white font-medium  bg-[#bed604] hover:bg-[#ebe238f8] focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
                         Delete
 
                     </button>
+                    <Link to={`/dashboard/update/${recipe?.id}`} type="button" className="text-white font-medium  bg-[#03712f] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
+                        Update
+                    </Link>
                 </div>
             </td>
         </tr>
