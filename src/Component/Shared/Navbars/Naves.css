@@ -42,7 +42,7 @@
 
 .line {
   fill: none;
-  stroke: white;
+  stroke: rgb(218, 186, 7);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3;

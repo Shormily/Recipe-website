@@ -7,7 +7,7 @@
     border: 2px solid transparent;
     border-radius: 10px;
     outline: none;
-    background-color: #dfa15655;
+    background-color: #03592755;
     color: #0d0c22;
     transition: 0.5s ease;
     width: 100%;
@@ -20,7 +20,7 @@
 .input:focus,
 input:hover {
     outline: none;
-    border-color: #eba34b55;
+    border-color: #0d680355;
     background-color: #fff;
-    box-shadow: 0 0 0 5px #df9c4b55;
+    box-shadow: 0 0 0 5px #036a2555;
 }

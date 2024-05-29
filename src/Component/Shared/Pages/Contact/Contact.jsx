@@ -85,7 +85,7 @@ const Contact = () => {
                   style={{
                     paddingRight: "55px",
                     paddingLeft: "55px",
-                    backgroundColor: "#7d531ffd",
+                    backgroundColor: "#14532d",
                     color: "#fff",
                   }}
                 />

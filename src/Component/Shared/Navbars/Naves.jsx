@@ -176,47 +176,47 @@ const Naves = () => {
                             </Link>
                         </li>
                         <li className=" pr-4 pt-2 relative group   text-black">
-                                {!user?.email && (
-                                    <Link
+                            {!user?.email && (
+                                <Link
 
-                                        className=" text-black flex justify-between hover:opacity-50 "
-                                        to={"/login"}
-                                        onClick={handleLogOut}
-                                    >
-                                        SignIn
-                                        <IoLogInSharp className="mx-2 mt-1" size="20" />
-                                    </Link>
-                                )}
-                                {user?.email && (
-                                    <Link
-                                        onClick={logOut}
-                                        className="flex justify-between hover:opacity-50 "
-                                        to={"/register"}
+                                    className=" text-black flex justify-between hover:opacity-50 "
+                                    to={"/login"}
+                                    onClick={handleLogOut}
+                                >
+                                    SignIn
+                                    <IoLogInSharp className="mx-2 mt-1" size="20" />
+                                </Link>
+                            )}
+                            {user?.email && (
+                                <Link
+                                    onClick={logOut}
+                                    className="flex justify-between hover:opacity-50 "
+                                    to={"/register"}
 
-                                    >
-                                        SignOut
-                                        <IoLogInSharp className="mx-2 mt-1" size="20" />
-                                        <span>
-                                            {user?.photoURL ? (
-                                                <img
-                                                    className="  w-9 h-9 rounded-full  "
-                                                    src={user.photoURL}
-                                                    alt=""
-                                                />
-                                            ) : (
-                                                <small className="text-light ">{user?.displayName}</small>
-                                            )}
-                                        </span>
-                                    </Link>
-                                )}
-                            </li>   
+                                >
+                                    SignOut
+                                    <IoLogInSharp className="mx-2 mt-1" size="20" />
+                                    <span>
+                                        {user?.photoURL ? (
+                                            <img
+                                                className="  w-9 h-9 rounded-full  "
+                                                src={user.photoURL}
+                                                alt=""
+                                            />
+                                        ) : (
+                                            <small className="text-light ">{user?.displayName}</small>
+                                        )}
+                                    </span>
+                                </Link>
+                            )}
+                        </li>
 
-                       
-                        
+
+
 
                     </ul>
                 </React.Fragment>
-                <div className="sm:hidden z-10">
+                <div className="sm:hidden z-10 px-4">
                     <label className="hamburger">
                         <input className="hidden" type="checkbox" />
                         <svg onClick={handleNav} viewBox="0 0 32 32">
@@ -231,16 +231,24 @@ const Naves = () => {
                 <div onClick={handleNav}
                     className={
                         nav
-                            ? "overflow-y-hidden md:hidden ease-in duration-300 absolute  text-gray-950 left-0 top-0 w-full h-screen bg-[#002147]  px-4 py-7 flex flex-col"
+                            ? "overflow-y-hidden md:hidden ease-in duration-300 absolute  text-gray-950 left-0 top-0 w-full h-screen bg-[#14532d]  px-4 py-7 flex flex-col"
                             : "absolute top-0 h-screen left-[-100%] ease-in duration-500"
                     }
 
                 >
 
                     <ul className="h-full w-full text-center  pt-24">
-                        <li className="text-2xl py-4 text-white">
-                            <Link className="hover:opacity-50 nav-link cursor-default" to={"/"}>
-                                Home
+                        <li className="text-2xl py-4 text-white justify-center items-center flex">
+                            <Link
+                                to={'/'}
+                                className="hover:opacity-50  cursor-default "
+                            >
+                                <img
+                                    className="imgse"
+                                    src="https://i.ibb.co/vwtrYzc/footer-logo.png"
+                                    alt=""
+                                />
+
                             </Link>
 
                         </li>
@@ -250,6 +258,62 @@ const Naves = () => {
                             </Link>
 
                         </li>
+                        <li className="text-2xl py-4 text-white">
+                            <Link className="hover:opacity-50 nav-link cursor-default" to={"/product"}>
+                                Product
+                            </Link>
+
+                        </li>
+                        <li className="text-2xl py-4 text-white">
+                            <Link className="hover:opacity-50 nav-link cursor-default" to={"/contact"}>
+                                Contact
+                            </Link>
+
+                        </li>
+                        <li className="text-2xl py-4 text-white">
+                            <Link className="hover:opacity-50 nav-link cursor-default" to={"/dashboard"}>
+                                Dashboard
+                            </Link>
+
+                        </li>
+
+                        <li className=" pr-4 pt-2 relative group justify-center items-center flex  text-white">
+                            {!user?.email && (
+                                <Link
+
+                                    className=" text-white flex gap-4"
+                                    to={"/login"}
+                                    onClick={handleLogOut}
+                                >
+                                    SignIn
+                                    <IoLogInSharp className="mx-2 mt-1" size="20" />
+                                </Link>
+                            )}
+                            {user?.email && (
+                                <Link
+                                    onClick={logOut}
+                                    className="flex justify-between hover:opacity-50 "
+                                    to={"/register"}
+
+                                >
+                                    SignOut
+                                    <IoLogInSharp className="mx-2 mt-1" size="20" />
+                                    <span>
+                                        {user?.photoURL ? (
+                                            <img
+                                                className="  w-9 h-9 rounded-full  "
+                                                src={user.photoURL}
+                                                alt=""
+                                            />
+                                        ) : (
+                                            <small className="text-light ">{user?.displayName}</small>
+                                        )}
+                                    </span>
+                                </Link>
+                            )}
+                        </li>
+
+
                     </ul>
                 </div>
             </div>
