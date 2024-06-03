@@ -7,12 +7,12 @@ import Swal from "sweetalert2";
 
 const RecipeRow = ({ recipe ,onDelete }) => {
     // const recipe = useLoaderData();
-    const { id } = recipe;
-    console.log(id)
+    const { _id } = recipe;
+    console.log(_id)
 
-    console.log(id)
+    console.log(_id)
     const handleDelete = async () => {
-        await fetch(`http://localhost:3000/recipes/${id}`, {
+        await fetch(`http://localhost:5000/recipes/${_id}`, {
             method: "DELETE",
         })
             .then((res) => res.json())
@@ -25,7 +25,7 @@ const RecipeRow = ({ recipe ,onDelete }) => {
                     showConfirmButton: false,
                     timer: 1500
                   });
-                onDelete(id);
+                onDelete(_id);
                 // toast.success("Order Delete Successfully")
             });
     };
@@ -65,14 +65,14 @@ const RecipeRow = ({ recipe ,onDelete }) => {
             </td>
             <td className="px-6 py-4 whitespace-no-wrap flex  mt-6">
                 <div className="text-sm leading-5 text-gray-900">
-                    <Link to={`/dashboard/edit-recipe/${recipe?.id}`} type="button" className="text-white font-medium  bg-[#03712f] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
+                    <Link to={`/dashboard/edit-recipe/${recipe?._id}`} type="button" className="text-white font-medium  bg-[#03712f] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
                         Edit
                     </Link>
                     <button onClick={handleDelete} type="button" className="text-white font-medium  bg-[#bed604] hover:bg-[#ebe238f8] focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
                         Delete
 
                     </button>
-                    <Link to={`/dashboard/update/${recipe?.id}`} type="button" className="text-white font-medium  bg-[#03712f] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
+                    <Link to={`/dashboard/update/${recipe?._id}`} type="button" className="text-white font-medium  bg-[#03712f] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm pt-1 p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
                         Update
                     </Link>
                 </div>

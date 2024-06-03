@@ -36,8 +36,14 @@ const AddRecipe = () => {
       category,
       description,
     };
-    await axios.post("http://localhost:3000/recipes", recipeData)
-      
+// await axios.post("http://localhost:3000/recipes", recipeData)
+    await fetch("http://localhost:5000/recipes", {
+      method: 'POST',
+      headers: {
+        "Content-type":"application/json",
+      },
+      body:JSON.stringify(recipeData),
+    })  
     .then((response) => {
   
       toast.success("Recipe added successfully")

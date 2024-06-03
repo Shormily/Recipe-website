@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             {
                 path: "/products/:id",
                 element: <ProductDetails />,
-                loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
+                loader:({params}) =>fetch(`http://localhost:5000/recipes/${params.id}`),
             },
             {
                 path: "contact",
@@ -73,12 +73,12 @@ const router = createBrowserRouter([
                     {
                         path: "edit-recipe/:id",
                         element: <EditRecipe />,
-                        loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
+                        loader:({params}) =>fetch(`http://localhost:5000/recipes/${params.id}`),
                     },
                     {
                         path: "update/:id",
                         element: <Update />,
-                        loader:({params}) =>fetch(`http://localhost:3000/recipes/${params.id}`),
+                        loader:({params}) =>fetch(`http://localhost:5000/recipes/${params.id}`),
                     },
                 
                 ],

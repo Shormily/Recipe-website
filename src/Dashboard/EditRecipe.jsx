@@ -30,7 +30,7 @@ const EditRecipe = () => {
                 // console.log(data?.data);
                 setCategories(categoriesData?.data);
             }
-            const recipeData = await axios.get(`http://localhost:3000/recipes/${id}`);
+            const recipeData = await axios.get(`http://localhost:5000/recipes/${id}`);
             if (recipeData?.status === 200) {
                 setRecipeDetails(recipeData?.data);
             }
@@ -53,8 +53,8 @@ const EditRecipe = () => {
             description,
         };
 
-        await axios.patch(`http://localhost:3000/recipes/${id}`, recipeData);
-        await fetch(`http://localhost:3000/recipes/${recipeDetails.id}`, {
+        await axios.patch(`http://localhost:5000/recipes/${id}`, recipeData);
+        await fetch(`http://localhost:5000/recipes/${recipeDetails.id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",
@@ -119,7 +119,7 @@ const EditRecipe = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="">Price </label>
+                        <label htmlFor="">Img Url </label>
                        
                         <input
                             className="bg-gray-100 p-4 w-full border border-black rounded-lg"

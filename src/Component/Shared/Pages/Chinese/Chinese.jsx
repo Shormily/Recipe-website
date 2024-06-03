@@ -2,7 +2,8 @@
 import { Link } from "react-router-dom";
 import "./Chinese.css"
 export default function Chinese({ chinese }) {
-  const { id } = chinese;
+  const { _id } = chinese;
+  console.log(_id)
   return (
     <div className="flex-cards py-5 m-auto">
       <div className="card-container bg-sky-100  rounded-sm  shadow-xl ">
@@ -23,7 +24,7 @@ export default function Chinese({ chinese }) {
           <div className="pt-4 flex justify-between">
           <p className="font-">Catagory: {chinese?.category}</p>
             <button type="button" className="text-gray-900 font-medium  bg-orange-300 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-gray-100  text-sm p-1 px-4 rounded-full text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-5">
-              <Link to={`/products/${id}`}>
+              <Link to={`/products/${_id}`}>
               Details
              </Link>
            
