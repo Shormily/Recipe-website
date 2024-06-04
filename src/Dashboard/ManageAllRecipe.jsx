@@ -21,8 +21,9 @@ const ManageAllRecipe = () => {
     load();
   }, [])
   const handleDeleteProduct = (id) => {
-    setProducts(recipes.filter((recipe) => recipe.id !== id));
+    setProducts(recipes.filter((recipe) => recipe._id !== id));
   };
+ 
 
 
   return (
