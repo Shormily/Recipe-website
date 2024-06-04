@@ -11,7 +11,7 @@ import Footer from "../Footer";
 export default function Login() {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/dashboard";
 
   useEffect(() => {
 

@@ -7,7 +7,7 @@ const Recipe = () => {
         "id": "1",
         "title": "Pad Thaier",
         "price": "10.99",
-        "image": "https://i.ibb.co/K61QZFD/breakfast-1.jpg",
+        "image": "https://i.ibb.co/CzNMkLN/dinner-3.jpg ",
         "category": "Thai",
         
       },
@@ -23,7 +23,7 @@ const Recipe = () => {
         "id": "3",
         "title": "Falafel Wrap",
         "price": "8.99",
-        "image": "https://i.ibb.co/86Gk25Y/breakfast-7.jpg",
+        "image": "https://i.ibb.co/S7GvJpL/dish-3.jpg",
         "category": "Middle Eastern",
         
       },
@@ -31,7 +31,7 @@ const Recipe = () => {
         "id": "4",
         "title": "Cold Cofee",
         "price": "7.99",
-        "image": "https://i.ibb.co/CzNMkLN/dinner-3.jpg",
+        "image": "https://i.dailymail.co.uk/1s/2018/11/01/18/5668494-0-image-a-4_1541098633929.jpg",
         "category": "French",
        
       },
@@ -39,29 +39,35 @@ const Recipe = () => {
         "id": "5",
         "title": "Tikkia chop",
         "price": "13.99",
-        "image": "https://i.ibb.co/P5ZnhHM/breakfast-6.jpg",
+        "image": "https://www.kworldnow.com/wp-content/uploads/2021/08/Korean-desserts-2-1024x576.jpg ",
        
       },
       {
         "id": "6",
         "title": "Vegetable Stir Fry",
         "price": 9.99,
-        "image": "https://i.ibb.co/5MhtKSd/breakfast-8.jpg",
+        "image": "https://i0.wp.com/ulzza.com/wp-content/uploads/2018/10/2013072917110983854_3_59_20130730072402.jpg?fit=520%2C329&ssl=1",
         "category": "Chinese",
         
       },
     
   ]
+
   return (
     <>
 
-      <div className="bg-gray-100 pt-20 pb-12">
-        <h1 className='text-4xl font-bold text-center mt-5 py-4'>Delicious Breakfast</h1>
+      <div className=" pt-20 pb-12">
+        <h1 className='text-4xl font-bold text-center mt-5 pt-4'>Delicious Breakfast</h1>
+        <img
+                className=" justify-center items-center flex m-auto py-3"
+                src="https://i.ibb.co/jGJmSrw/separater.png"
+                alt=""
+              />
         <div className="flex max-w-[1400px] m-auto   items-center justify-center ">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 pb-5 ">
           {breakfasts?.map((breakfast) => (
           <>
-         <div className="pt-3  flex">
+         <div className="pt-3  flex md:flex-row  flex-col">
                 <div className=" pt-3 ">
                   <div className="group w-[250px] h-[150px] rounded-sm  relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-2xl hover:shadow-black/10">
                     <div className="h-full">

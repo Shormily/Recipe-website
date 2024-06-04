@@ -37,8 +37,8 @@ const Sidebar = () => {
         { name: "Analytics", icon: TbReportAnalytics, margin: true },
         { name: "Home", link: "/", icon: FiShoppingCart },
         { name: "File Manager", icon: FiFolder },
-        { name: "Saved", icon: AiOutlineHeart,  },
-       
+        { name: "Saved", icon: AiOutlineHeart, },
+
     ];
     const [open, setOpen] = useState(true);
     return (
@@ -109,29 +109,29 @@ const Sidebar = () => {
                                         className="flex text-white"
                                     >
                                         <h2
-                                        className={`${open && "hidden"
-                                            } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
-                                    >
-                                        SignIn
-                                    </h2>
+                                            className={`${open && "hidden"
+                                                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
+                                        >
+                                            SignIn
+                                        </h2>
                                         <IoLogInSharp className="mx-2 mt-1" size="20" />
                                     </Link>
                                 )}
                                 {user?.email && (
                                     <Link
                                         onClick={logOut}
-                                       
+
                                         to={"/register"}
                                         className="flex"
 
                                     >
-                                         <h2
-                                        className={`${open && "hidden"
-                                            } absolute left-48 bg-white font-semibold whitespace-pre text-white rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
-                                    >
-                                       
-                                    </h2>
-                                    SignOut
+                                        <h2
+                                            className={`${open && "hidden"
+                                                } absolute left-48 bg-white font-semibold whitespace-pre text-white rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
+                                        >
+
+                                        </h2>
+                                        SignOut
                                         <IoLogInSharp className="mx-2 mt-1 mb-3" size="20" />
                                         <span>
                                             {user?.photoURL ? (

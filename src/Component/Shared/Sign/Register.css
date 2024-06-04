@@ -20,7 +20,14 @@
 .input:focus,
 input:hover {
     outline: none;
-    border-color: #0d680355;
+    border-color: #a16107b5;
     background-color: #fff;
-    box-shadow: 0 0 0 5px #036a2555;
+    box-shadow: 0 0 0 1px #a16107c6;
+}
+.textarea:focus,
+textarea:hover {
+    outline: none;
+    border-color: #a16107bc;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #a16107a1;
 }

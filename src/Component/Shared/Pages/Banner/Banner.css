@@ -16,7 +16,61 @@
     max-width: 100% !important;
     vertical-align: baseline !important;
 }
+/* https://expert-themes.com/html/shangrila/images/background/8.png */
+.productdetail{
 
+    background-image:linear-gradient(rgba(105, 61, 3, 0.562),rgba(126, 77, 3, 0.363)), url("https://i.ibb.co/kScyXR1/img18.jpg") ;
+    width:100%;
+    height: 25.125rem;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 5.37rem 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.product-about{
+    background-image:linear-gradient(rgba(105, 61, 3, 0.562),rgba(126, 77, 3, 0.363)), url("https://i.ibb.co/kScyXR1/img18.jpg") ;
+    width:100%;
+    height: 6.125rem;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 5.37rem 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.home-sections{
+    width:100%;
+    height: 28.125rem;
+  
+    background-image:linear-gradient(rgba(105, 61, 3, 0.562),rgba(126, 77, 3, 0.363)), url("https://expert-themes.com/html/shangrila/images/background/4.jpg") ;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 5.37rem 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* padding-top: 100px; */
+    
+  }
+
+  .homes{
+    background-image:linear-gradient(rgba(175, 112, 29, 0.555),rgba(25, 19, 10, 0.541)), url("https://expert-themes.com/html/shangrila/images/resource/products/10.jpg") ;
+    /* background-attachment: fixed; */
+    /* height: 68.125rem; */
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+  .boy-sections{
+    width:100%;
+    /* height: 28.125rem; */
+    background-image: url("https://expert-themes.com/html/shangrila/images/background/8.png") ;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 5.37rem 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* padding-top: 100px; */
+    
+  }
 
 .review-wrapper{
     /* width: 100%;
@@ -41,4 +95,23 @@
     width: 100%;
     height: 400px;
     
+}
+
+.home-icn {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:#d1d5db ;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.home-icn:hover {
+    color: #f0f2fa;
+    background-color: #a09d03a4;
+    /* background: linear-gradient(97deg, rgb(19, 1, 27) 0%, rgb(18, 9, 15) 72%, rgb(13, 6, 7) 98%); */
 }

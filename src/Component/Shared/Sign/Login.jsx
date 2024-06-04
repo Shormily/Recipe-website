@@ -26,19 +26,19 @@ export default function Login() {
     createUserWithEmailAndPassword(email, password);
   };
 
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/dashboard";
 
   useEffect(() => {
     if (user) {
       // setUser(user);
       navigate(from, { replace: true });
       Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "Successfully SignIn",
-          showConfirmButton: false,
-          timer: 3000,
-        });
+        position: "top-center",
+        icon: "success",
+        title: "Successfully SignIn",
+        showConfirmButton: false,
+        timer: 3000,
+      });
     }
   }, [user, loading, navigate, from]);
   return (

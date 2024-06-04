@@ -1,0 +1,15 @@
+input[type=text] {
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: #a16207;
+  /* width: 500px; */
+  }
+  input:focus {
+    border-color: #a16207
+  }
+  textarea{
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: #a16207;
+  /* width: 500px; */
+  }

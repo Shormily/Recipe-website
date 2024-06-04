@@ -58,7 +58,7 @@ const Naves = () => {
                                             style={{
                                                 justifyContent: "center",
                                                 alignItems: "center",
-                                                backgroundColor: "#991b1b",
+                                                backgroundColor: "#a16207",
                                                 height: "4px",
                                             }}
                                         />
@@ -71,10 +71,10 @@ const Naves = () => {
                                                 <ul className=" text-[15px] ">
                                                     <li>
                                                         <Link
-                                                            to={'/'}
-                                                            className="block pb-3 text-gray-950 hover:text-[#991b1b]"
+                                                            to={'/reservation'}
+                                                            className="block pb-3 text-gray-950 hover:text-[#a16207]"
                                                         >
-                                                            History
+                                                           Reservation
                                                         </Link>
                                                     </li>
                                                     <div className="w-full  m-auto pb-4 ">
@@ -87,15 +87,29 @@ const Naves = () => {
                                                             }}
                                                         />
                                                     </div>
+                                                 
+
                                                     <li>
                                                         <Link
 
-                                                            className="block pb-3 text-gray-950 hover:text-[#991b1b]"
+                                                            className="block pb-3 text-gray-950 hover:text-[#a16207]"
+                                                            to={'/gallery'}
                                                         >
-                                                            Administrator
+                                                           Gallery
                                                         </Link>
+                                                       
                                                     </li>
-                                                    <div className="max-w-[1200px]  m-auto pb-4 ">
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative  mx-4">
+                                        <div className="  ">
+                                            <div>
+                                                <ul className=" text-[15px] ">
+                                                    
+                                                    <div className="w-full  m-auto pb-4 ">
                                                         <div
                                                             style={{
                                                                 justifyContent: "center",
@@ -105,54 +119,19 @@ const Naves = () => {
                                                             }}
                                                         />
                                                     </div>
-                                                    <li>
-                                                        <Link
-
-                                                            className="block pb-3 text-gray-950 hover:text-[#991b1b]"
-                                                            to={'/'}
-                                                        >
-                                                            Cafeteria
-                                                        </Link>
-                                                    </li>
-                                                    <div className="max-w-[1200px]  m-auto pb-4 ">
-                                                        <div
-                                                            style={{
-                                                                justifyContent: "center",
-                                                                alignItems: "center",
-                                                                backgroundColor: "#d4d4d8",
-                                                                height: "1px",
-                                                            }}
-                                                        />
-                                                    </div>
+                                                 
 
                                                     <li>
                                                         <Link
 
-                                                            className="block pb-3 text-gray-950 hover:text-[#991b1b]"
-                                                            to={'/'}
+                                                            className="block pb-3 text-gray-950 hover:text-[#a16207]"
+                                                            to={'/coming'}
                                                         >
-                                                            Our Campus
+                                                           Shop
                                                         </Link>
-                                                        <div className="max-w-[1200px]  m-auto pb-4 ">
-                                                            <div
-                                                                style={{
-                                                                    justifyContent: "center",
-                                                                    alignItems: "center",
-                                                                    backgroundColor: "#d4d4d8",
-                                                                    height: "1px",
-                                                                }}
-                                                            />
-                                                        </div>
+                                                       
                                                     </li>
-                                                    <li>
-                                                        <Link
-
-                                                            className="block pb-5 text-gray-950 hover:text-[#991b1b]"
-                                                            to={'/'}
-                                                        >
-                                                            Our Teachers
-                                                        </Link>
-                                                    </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -162,8 +141,80 @@ const Naves = () => {
                         </li>
                         <li className="pr-4 pt-2 relative group   text-black">
                             <Link className="hover:opacity-50 nav-link cursor-default" to={"/product"}>
-                                Product
+                               Items
                             </Link>
+                        </li>
+                        <li className="pr-4 pt-2 relative group   text-black">
+                            <Link className="hover:opacity-50 nav-link cursor-default" to={"/blog"}>
+                              Blog
+                            </Link>
+                            <div className="absolute  top-0 -left-68 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px]  transform ">
+                                <div className="relative top-6 bg-white rounded-sm w-full">
+                                    <div className=" m-auto pb-4 ">
+                                        <div
+                                            style={{
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                                backgroundColor: "#a16207",
+                                                height: "4px",
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="w-10 mx-5 bg-white "></div>
+
+                                    <div className="relative  mx-4">
+                                        <div className="  ">
+                                            <div>
+                                                <ul className=" text-[15px] ">
+                                                    <li>
+                                                        <Link
+                                                            to={'/article'}
+                                                            className="block pb-3 text-gray-950 hover:text-[#a16207]"
+                                                        >
+                                                          Articels
+                                                        </Link>
+                                                    </li>
+                                                    
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative  mx-4">
+                                        <div className="  ">
+                                            <div>
+                                                <ul className=" text-[15px] ">
+                                                    
+                                                    <div className="w-full  m-auto pb-4 ">
+                                                        <div
+                                                            style={{
+                                                                justifyContent: "center",
+                                                                alignItems: "center",
+                                                                backgroundColor: "#d4d4d8",
+                                                                height: "1px",
+                                                            }}
+                                                        />
+                                                    </div>
+                                                 
+
+                                                    <li>
+                                                        <Link
+
+                                                            className="block pb-3 text-gray-950 hover:text-[#a16207]"
+                                                            to={'/coming'}
+                                                        >
+                                                         Activities Food
+                                                        </Link>
+                                                       
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li className="pr-4 pt-2 relative group   text-black">
                             <Link className="hover:opacity-50 nav-link cursor-default" to={"/contact"}>

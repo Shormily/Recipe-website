@@ -23,3 +23,15 @@
     /* padding-top: 100px; */
     
   }
+  .about-sections{
+    width:100%;
+    /* height: 28.125rem; */
+    background-image:linear-gradient(rgba(105, 61, 3, 0.562),rgba(126, 77, 3, 0.363)), url(" https://expert-themes.com/html/shangrila/images/background/4.jpg") ;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 5.37rem 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+    /* padding-top: 100px; */
+    
+  }

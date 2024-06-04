@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Update = () => {
     const recipes = useLoaderData();
-  
-    
+
+
     // Initialize state with recipe data
     const [title, setTitle] = useState(recipes.title);
     const [price, setPrice] = useState(recipes.price);
@@ -12,6 +13,10 @@ const Update = () => {
     const [_id, setId] = useState(recipes?._id);
     const [description, setDescription] = useState(recipes?.description);
     const [image, setImage] = useState(recipes?.image);
+    // Navigate system
+    const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/dashboard/manage-recipes";
+    // Navigate end
 
     const handleUpdateRecipe = async (e) => {
         e.preventDefault();
@@ -22,8 +27,9 @@ const Update = () => {
         const description = form.description.value;
         const image = form.image_url.value;
 
+
         const updatedRecipe = {
-            _id,
+
             title,
             price,
             category,
@@ -38,7 +44,35 @@ const Update = () => {
             },
             body: JSON.stringify(updatedRecipe),
         })
-            .then((res) => res.json())
+        .then((res) => {
+                
+            res.json(
+                Swal.fire({
+                title: "SuccessFully Updated",
+                icon: "success",
+                color: "#14532d",
+                confirmButtonColor: "#14532d",
+                confirmButtonText:"Okey",
+                showClass: {
+                  popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                  `
+                },
+                hideClass: {
+                  popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                  `
+                }
+                })
+            )
+            
+            navigate(from, { replace: true });
+            
+        })
             .then((data) => console.log(data));
     };
     console.log(handleUpdateRecipe);
@@ -47,16 +81,7 @@ const Update = () => {
         <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
             <h1 className="text-4xl mb-4 text-center mt-24">Update Recipe</h1>
             <form onSubmit={handleUpdateRecipe} className="w-full">
-                <div className="mb-4">
-                    <label>Id</label>
-                    <input
-                        onChange={(e) => setId(e.target.value)}
-                        value={_id}
-                        type="text"
-                        name="id"
-                        className="w-full py-3 px-5 border"
-                    />
-                </div>
+
                 <div className="mb-4">
                     <label>Title</label>
                     <input

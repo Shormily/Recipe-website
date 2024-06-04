@@ -14,6 +14,11 @@ import Login from "../Sign/Login";
 import PrivateRoute from "./PrivateRoute.jsx";
 import ProductDetails from "../Pages/Product/ProductDetails.jsx";
 import Update from "../../../Dashboard/Update.jsx";
+import Comming from "../Comming/Comming.jsx";
+import Reservation from "../Comming/Reservation.jsx";
+import Gallery from "../Comming/Gallery.jsx";
+import Blog from "../Comming/Blog.jsx";
+import Articles from "../Comming/Articles.jsx";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +32,26 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element:<About/>
+            },
+            {
+                path: "coming",
+                element:<Comming/>
+            },
+            {
+                path: "reservation",
+                element:<Reservation/>
+            },
+            {
+                path: "article",
+                element:<Articles/>
+            },
+            {
+                path: "gallery",
+                element:<Gallery/>
+            },
+            {
+                path: "blog",
+                element:<Blog/>
             },
             {
                 path: "product",

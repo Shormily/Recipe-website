@@ -19,13 +19,13 @@ const HomeCard = () => {
         }
     ]
     return (
-        <>
+        <div className="">
             <h1 className="text-center font-bold text-5xl pt-12 pb-4 ">Our Blog</h1>
             <div
                 style={{
                     justifyContent: "center",
                     alignItems: "center",
-                    backgroundColor: "#991b1b",
+                    backgroundColor: "#a16207",
                     height: "4px",
                     width: 150
                 }}
@@ -34,8 +34,8 @@ const HomeCard = () => {
             <p className="text-center  text-[13px] pb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br />
                 doloremque laudantium, toed ut perspiciatis under.
             </p>
-            
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-6  m-auto max-w-[1200px] pb-12 ">
+
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  gap-6  m-auto max-w-[1200px] pb-24 ">
                 {cards?.map((card) => (<>
                     <div className="items-center  gap-4 justify-center  py-5 ">
                         <div className="card-container  rounded-sm   ">
@@ -64,7 +64,7 @@ const HomeCard = () => {
                     </div>
                 </>))}
             </div>
-        </>
+        </div>
 
     );
 };

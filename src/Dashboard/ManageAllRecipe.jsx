@@ -63,7 +63,7 @@ const ManageAllRecipe = () => {
               <p className='flex-between'>Delivery </p>
               <p className='flex-between'>200 </p>
             </div></div>
-            <div className=" py-5 px-5 text-white  rounded-2xl bg-[#14532d]">
+          <div className=" py-5 px-5 text-white  rounded-2xl bg-[#14532d]">
             <p className="flex gap-2 px-3">
 
               <FaHandHoldingUsd className="bg-[#a3e635] text-white rounded-full w-10 h-10 py-2 px-2" size={30} /> <span className="pt-2">Total Income</span></p>
@@ -78,7 +78,7 @@ const ManageAllRecipe = () => {
         <div className=" px-5 w-full">
           <div className="overflow-x-auto  w-full shadow-lg">
             {/* <h1 className="text-[#002147] text-4xl pt-12 pb-6">Manage All Orders</h1> */}
-            <Toaster/>
+            <Toaster />
             <table className="min-w-full divide-y divide-gray-200  w-full">
               <thead>
                 <tr>
@@ -103,7 +103,7 @@ const ManageAllRecipe = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                
+
                 {recipes?.map((recipe) => (
                   <RecipeRow key={recipe?.id} recipe={recipe} onDelete={handleDeleteProduct} />
                 ))}
