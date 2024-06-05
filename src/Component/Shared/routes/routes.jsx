@@ -19,6 +19,10 @@ import Reservation from "../Comming/Reservation.jsx";
 import Gallery from "../Comming/Gallery.jsx";
 import Blog from "../Comming/Blog.jsx";
 import Articles from "../Comming/Articles.jsx";
+import LoadingSpinner from "../../../Layout/LoadingSpinner.jsx";
+import Rerom from "../Sign/Rerom.jsx";
+import Profile from "../../../Dashboard/Profile.jsx";
+import EditProfile from "../../../Dashboard/EditProfile.jsx";
 
 const router = createBrowserRouter([
     {
@@ -27,88 +31,103 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element:<Banner/>,
+                element: <Banner />,
             },
             {
                 path: "about",
-                element:<About/>
+                element: <About />
             },
             {
                 path: "coming",
-                element:<Comming/>
+                element: <Comming />
             },
             {
                 path: "reservation",
-                element:<Reservation/>
+                element: <Reservation />
             },
             {
                 path: "article",
-                element:<Articles/>
+                element: <Articles />
             },
             {
                 path: "gallery",
-                element:<Gallery/>
+                element: <Gallery />
             },
             {
                 path: "blog",
-                element:<Blog/>
+                element: <Blog />
             },
             {
                 path: "product",
-                element:<Products/>
+                element: <Products />
             },
             {
                 path: "/products/:id",
                 element: <ProductDetails />,
-                loader:({params}) =>fetch(`http://localhost:5000/recipes/${params.id}`),
+                loader: ({ params }) => fetch(`https://server-0bf5.onrender.com/recipes/${params.id}`),
             },
             {
                 path: "contact",
-                element:<Contact/>
+                element: <Contact />
             },
             {
                 path: "register",
-                element:<Register/>
+                element: <Register />
+            },
+            {
+                path: "rerom",
+                element: <Rerom />
             },
             {
                 path: "login",
-                element:<Login/>
+                element: <Login />
             },
             {
                 path: "/dashboard",
                 element: (
-                   <PrivateRoute>
-                         <DashboardLayout />
-                   </PrivateRoute>
+                    <PrivateRoute>
+                        <DashboardLayout />
+                    </PrivateRoute>
                 ),
                 children: [
-                  {
-                    index: true,
-                    element: <Dashboardhome />,
+                    {
+                        index: true,
+                        element: <Dashboardhome />,
+                    },
+                    {
+                        path: "profile",
+                        element: <Profile />
                     },
                     {
                         path: "manage-recipes",
                         element: <ManageAllRecipe />
-                      
+
+                    },
+                    {
+                        path: "profile-edit/:id",
+                        element: <EditProfile />,
+                        loader: ({ params }) => fetch(`https://server-0bf5.onrender.com/users/get/${params.id}`),
+
+
                     },
                     {
                         path: "add-recipes",
-                        element:<AddRecipe/>
+                        element: <AddRecipe />
                     },
                     {
                         path: "edit-recipe/:id",
                         element: <EditRecipe />,
-                        loader:({params}) =>fetch(`http://localhost:5000/recipes/${params.id}`),
+                        loader: ({ params }) => fetch(`https://server-0bf5.onrender.com/recipes/${params.id}`),
                     },
                     {
                         path: "update/:id",
                         element: <Update />,
-                        loader:({params}) =>fetch(`http://localhost:5000/recipes/${params.id}`),
+                        loader: ({ params }) => fetch(`https://server-0bf5.onrender.com/recipes/${params.id}`),
                     },
-                
+
                 ],
-              },
-       ]
+            },
+        ]
     }
 ])
 

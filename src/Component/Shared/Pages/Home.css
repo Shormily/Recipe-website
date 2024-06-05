@@ -62,3 +62,13 @@
     padding: 4.37rem 0;
   
 }
+
+.profil-sectioner{
+  width: 100%;
+  height: auto;
+  background-image:linear-gradient(rgba(1, 4, 14, 0.433),rgba(219, 189, 92, 0.347)),url(https://i.ibb.co/kScyXR1/img18.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 60%;
+  padding: 12.37rem 0;
+}

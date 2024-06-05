@@ -22,7 +22,8 @@ const Blog = () => {
         },
         {
             img:"https://i.ibb.co/87vSLcp/dish-8.jpg",
-        },{
+        },
+        {
             img:"https://i.ibb.co/Nsv1hDG/dish-9.jpg",
         },{
             img:"https://i.ibb.co/Z8nkjyY/dish-11.jpg",

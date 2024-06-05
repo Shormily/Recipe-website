@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import { useEffect } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useEffect, useState } from "react";
+import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase/firebase.config";
 import GoogleLogIn from "../Auth/GoogleLogIn";
 import Swal from "sweetalert2";
@@ -11,25 +11,36 @@ import Footer from "../Footer";
 export default function Login() {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
-  let from = location.state?.from?.pathname || "/dashboard";
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  let from = location.state?.from?.pathname || "/dashboard/profile";
 
-  useEffect(() => {
+  // Create Password and email auth
+  const [
+    createUserWithEmailAndPassword,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+  
+  if (error) {
+    return (
+      <div>
+        <p>Error: {error.message}</p>
+      </div>
+    );
+  }
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (user) {
+    return (
+      <div>
+        <p>Registered User: {user.user.email}</p>
+      </div>
+    );
+  }
+   
 
-
-    if (user) {
-      // setUser(user);
-      navigate(from, { replace: true });
-      // Swal.fire({
-      //     position: "top-center",
-      //     icon: "success",
-      //     title: "Successfully SignIn",
-      //     showConfirmButton: false,
-      //     timer: 3000,
-      //   });
-
-
-    }
-  }, [user, loading, navigate, from]);
+  
   return (
     <>
       <Naves />
@@ -39,7 +50,7 @@ export default function Login() {
           <div className="flex justify-center">
 
             <div className="card shrink-0 w-full max-w-md shadow-2xl py-3 pt-3 bg-base-100 px-4">
-              <form className="card-body">
+              <form className="card-body" >
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -48,6 +59,8 @@ export default function Login() {
                     type="email"
                     placeholder="email"
                     className="input input-bordered"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -59,6 +72,8 @@ export default function Login() {
                     type="password"
                     placeholder="password"
                     className="input input-bordered"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                   />
                   <label className="label">
@@ -68,7 +83,7 @@ export default function Login() {
                   </label>
                 </div>
                 <div className="justify-center items-center flex mt-6 mb-2">
-                  <button className="  py-3 bg-[#14532d] text-white w-full rounded-lg ">Register Now</button>
+                  <button onClick={() => createUserWithEmailAndPassword(email, password)} className="  py-3 bg-[#14532d] text-white w-full rounded-lg ">Register Now</button>
                 </div>
 
                 <p className="text-center ">
@@ -78,11 +93,7 @@ export default function Login() {
                   </Link>
                 </p>
               </form>
-              <div className=" justify-center items-center flex mt-2">
-                <div className=" gap-2  mb-7 w-full">
-                  <GoogleLogIn />
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

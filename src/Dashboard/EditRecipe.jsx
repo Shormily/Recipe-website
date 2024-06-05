@@ -25,12 +25,12 @@ const EditRecipe = () => {
 
     useEffect(() => {
         async function load() {
-            const categoriesData = await axios.get("http://localhost:3000/categories");
+            const categoriesData = await axios.get("https://server-0bf5.onrender.com/categories");
             if (categoriesData?.status === 200) {
                 // console.log(data?.data);
                 setCategories(categoriesData?.data);
             }
-            const recipeData = await axios.get(`http://localhost:5000/recipes/${id}`);
+            const recipeData = await axios.get(`https://server-0bf5.onrender.com/recipes/${id}`);
             if (recipeData?.status === 200) {
                 setRecipeDetails(recipeData?.data);
             }
@@ -39,6 +39,7 @@ const EditRecipe = () => {
     }, [id]);
 
     const handleCreateRecipe = async (e) => {
+        const token = localStorage.getItem('token');
         e.preventDefault();
         const form = e.target;
         const title = form.title.value;
@@ -53,56 +54,57 @@ const EditRecipe = () => {
             description,
         };
 
-        await axios.patch(`http://localhost:5000/recipes/${id}`, recipeData);
-        await fetch(`http://localhost:5000/recipes/${recipeDetails.id}`, {
+        await axios.patch(`https://server-0bf5.onrender.com/recipes/${id}`, recipeData);
+        await fetch(`https://server-0bf5.onrender.com/recipes/${recipeDetails.id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",
+                authorization: `Bearer ${token}`
             },
             body: JSON.stringify(recipeData),
         })
             .then((res) => {
-                
+
                 res.json(
                     Swal.fire({
-                    title: "SuccessFully Edited",
-                    icon: "success",
-                    color: "#14532d",
-                    confirmButtonColor: "#14532d",
-                    confirmButtonText:"Okey",
-                    showClass: {
-                      popup: `
+                        title: "SuccessFully Edited",
+                        icon: "success",
+                        color: "#14532d",
+                        confirmButtonColor: "#14532d",
+                        confirmButtonText: "Okey",
+                        showClass: {
+                            popup: `
                         animate__animated
                         animate__fadeInUp
                         animate__faster
                       `
-                    },
-                    hideClass: {
-                      popup: `
+                        },
+                        hideClass: {
+                            popup: `
                         animate__animated
                         animate__fadeOutDown
                         animate__faster
                       `
-                    }
+                        }
                     })
                 )
-                
+
                 navigate(from, { replace: true });
-                
+
             })
             .then((data) => console.log(data));
     };
 
-   
+
     return (
         <>
-            <Toaster/>
+            <Toaster />
             <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
                 <h1 className="text-4xl mb-4 text-center mt-24">Edit Recipe</h1>
                 <form onSubmit={handleCreateRecipe} className="w-full">
                     <div className="mb-4">
                         <label htmlFor="">Id </label>
-                        <input  onChange={(e) => setId(e.target.value)} defaultValue={recipeDetails?.id} type="text" name="id" className="w-full py-3 px-5 border" />
+                        <input onChange={(e) => setId(e.target.value)} defaultValue={recipeDetails?.id} type="text" name="id" className="w-full py-3 px-5 border" />
                     </div>
                     <div className="mb-4">
                         <label htmlFor="">Title </label>
@@ -120,7 +122,7 @@ const EditRecipe = () => {
                     </div>
                     <div className="mb-4">
                         <label htmlFor="">Img Url </label>
-                       
+
                         <input
                             className="bg-gray-100 p-4 w-full border border-black rounded-lg"
                             type="text"
@@ -132,7 +134,7 @@ const EditRecipe = () => {
                     </div>
                     <div className="mb-4">
                         <label htmlFor="">Cateogry </label>
-                        <select   name="category" id="" className="w-full py-3 px-5 border">
+                        <select name="category" id="" className="w-full py-3 px-5 border">
                             {categories?.map((category) => (
                                 <option onChange={(e) => setCategories(e.target.value)} key={category?.id} selected={category?.title === recipeDetails?.category} value={category?.title}>
                                     {category?.title}
@@ -152,7 +154,7 @@ const EditRecipe = () => {
                             value={"Add Recipe"}
                             className="w-full btn py-3 px-5 border btn-neutral"
                         />
-                        
+
                     </div>
 
                 </form>

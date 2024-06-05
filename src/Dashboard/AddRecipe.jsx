@@ -4,23 +4,24 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const AddRecipe = () => {
-    const [categories, setCategories] = useState();
+  const [categories, setCategories] = useState();
 
   useEffect(() => {
     async function load() {
-      const data = await axios.get("http://localhost:3000/categories");
+      const data = await axios.get("https://server-0bf5.onrender.com/categories");
       if (data?.status === 200) {
         console.log(data?.data);
-        
+
         setCategories(data?.data);
-        
+
       }
     }
 
     load();
-    
-  }, []);
 
+  }, []);
+  // Tokens
+  const token = localStorage.getItem('token')
   const handleCreateRecipe = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -36,77 +37,79 @@ const AddRecipe = () => {
       category,
       description,
     };
-// await axios.post("http://localhost:3000/recipes", recipeData)
-    await fetch("http://localhost:5000/recipes", {
+
+    // await axios.post("https://server-0bf5.onrender.com/recipes", recipeData)
+    await fetch("https://server-0bf5.onrender.com/recipes", {
       method: 'POST',
       headers: {
-        "Content-type":"application/json",
+        "Content-type": "application/json",
+        "authorization": `Bearer ${token}`,
       },
-      body:JSON.stringify(recipeData),
-    })  
-    .then((response) => {
-  
-      toast.success("Recipe added successfully")
-    
-  })
-  .catch((error) => {
-    toast.error('Failed to add recipe');
-  });
+      body: JSON.stringify(recipeData),
+    })
+      .then((response) => {
+
+        toast.success("Recipe added successfully")
+
+      })
+      .catch((error) => {
+        toast.error('Failed to add recipe');
+      });
   };
 
- 
-    return (
-      <>
-        <Toaster/>
-           <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
-          <h1 className="text-4xl mb-4 text-center mt-24">Add Recipe </h1>
-         
-      <form onSubmit={handleCreateRecipe} className="w-full">
-        <div className="mb-4">
-          <label htmlFor="">Id </label>
-          <input type="text" name="id" className="w-full py-3 px-5 border" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="">Title </label>
-          <input type="text" name="title" className="w-full py-3 px-5 border" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="">Price </label>
-          <input
-            type="number"
-            name="price"
-            className="w-full py-3 px-5 border"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="">Cateogry </label>
-          <select name="category" id="" className="w-full py-3 px-5 border">
-            {categories?.map((category) => (
-              <option key={category?.id} value={category?.title}>
-                {category?.title}
-              </option>
-            ))}
-          </select>
-        </div>
 
-        <div className="mb-4">
-          <label htmlFor="">Description </label>
-          <textarea name="description" className="w-full py-3 px-5 border" />
-        </div>
+  return (
+    <>
+      <Toaster />
+      <div className="justify-center items-center mx-auto max-w-[700px] w-full ">
+        <h1 className="text-4xl mb-4 text-center mt-24">Add Recipe </h1>
 
-        <div className="mb-4 flex justify-between">
-          <input
-            type="submit"
-            value={"Add Recipe"}
-            className="w-full btn py-3 px-5 border btn-neutral"
-          />
-          
-        </div>
-          </form>
-          
-    </div> 
-        </>
-    );
+        <form onSubmit={handleCreateRecipe} className="w-full">
+          <div className="mb-4">
+            <label htmlFor="">Id </label>
+            <input type="text" name="id" className="w-full py-3 px-5 border" />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="">Title </label>
+            <input type="text" name="title" className="w-full py-3 px-5 border" />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="">Price </label>
+            <input
+              type="number"
+              name="price"
+              className="w-full py-3 px-5 border"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="">Cateogry </label>
+            <select name="category" id="" className="w-full py-3 px-5 border">
+              {categories?.map((category) => (
+                <option key={category?.id} value={category?.title}>
+                  {category?.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label htmlFor="">Description </label>
+            <textarea name="description" className="w-full py-3 px-5 border" />
+          </div>
+
+          <div className="mb-4 flex justify-between">
+            <input
+              type="submit"
+              value={"Add Recipe"}
+              className="w-full btn py-3 px-5 border btn-neutral"
+            />
+
+          </div>
+        </form>
+
+      </div>
+    </>
+  );
 };
 
 export default AddRecipe;

@@ -12,7 +12,7 @@ const ManageAllRecipe = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function load() {
-      const data = await axios.get('http://localhost:5000/recipes')
+      const data = await axios.get('https://server-0bf5.onrender.com/recipes')
       if (data?.status === 200) {
         setRescipes(data?.data);
       }
@@ -23,14 +23,14 @@ const ManageAllRecipe = () => {
   const handleDeleteProduct = (id) => {
     setProducts(recipes.filter((recipe) => recipe._id !== id));
   };
- 
+
 
 
   return (
     <>
       <div className=" px-8 pt-5 pb-12">
         <p className="font-bold text-4xl py-2 pb-7">Overview</p>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-24">
+        <div className="grid lg:grid-cols-4 md:grid-cols-1 sm:grid-cols-1 gap-24">
           <div className=" py-5 pb-5 px-8  w-full   text-white bg-[#14532d] shadow-lg rounded-3xl">
             <p className="flex gap-2 px-3">
 

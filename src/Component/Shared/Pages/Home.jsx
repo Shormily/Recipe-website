@@ -7,21 +7,21 @@ const Home = () => {
     const [recipes, setRescipes] = useState([]);
     const [categoris, setCategories] = useState();
     useEffect(() => {
-        fetch("http://localhost:5000/recipes")
+        fetch("https://server-0bf5.onrender.com/recipes")
             .then((res) => res.json())
             .then((data) => setRescipes(data));
 
-        // fetch("http://localhost:3000/categories")
+        // fetch("https://server-0bf5.onrender.com/categories")
         //     .then((res) => res.json())
         //     .then((data) => setCategories(data));
         // async function load() {
         //     //get recipies
-        //     const recipeRes = await fetch("http://localhost:3000/recipes");
+        //     const recipeRes = await fetch("https://server-0bf5.onrender.com/recipes");
         //     const recipeData = await recipeRes.json();
         //     setRescipes(recipeData);
         //     //get categories
 
-        //     const categoryRes = await fetch("http://localhost:3000/categories");
+        //     const categoryRes = await fetch("https://server-0bf5.onrender.com/categories");
         //     const categoryData = await categoryRes.json();
 
         //     setCategories(categoryData);
@@ -55,8 +55,8 @@ const Home = () => {
                                 <Chinese key={chinese?.id} chinese={chinese} />
                             ))} */}
                         {recipes?.map((chinese) => (
-                                <Chinese key={chinese?._id} chinese={chinese} />
-                            ))}
+                            <Chinese key={chinese?._id} chinese={chinese} />
+                        ))}
                     </div>
                 </div>
             </div>

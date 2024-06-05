@@ -17,8 +17,11 @@ const Update = () => {
     const navigate = useNavigate();
     let from = location.state?.from?.pathname || "/dashboard/manage-recipes";
     // Navigate end
-
+    // const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token')
     const handleUpdateRecipe = async (e) => {
+
+
         e.preventDefault();
         const form = e.target;
         const title = form.title.value;
@@ -37,42 +40,44 @@ const Update = () => {
             image
         };
 
-        await fetch(`http://localhost:5000/recipes/${_id}`, {
+
+        await fetch(`https://server-0bf5.onrender.com/recipes/${_id}`, {
             method: "PATCH",
             headers: {
                 "Content-type": "application/json",
+                "authorization": `Bearer ${token}`,
             },
             body: JSON.stringify(updatedRecipe),
         })
-        .then((res) => {
-                
-            res.json(
-                Swal.fire({
-                title: "SuccessFully Updated",
-                icon: "success",
-                color: "#14532d",
-                confirmButtonColor: "#14532d",
-                confirmButtonText:"Okey",
-                showClass: {
-                  popup: `
+            .then((res) => {
+
+                res.json(
+                    Swal.fire({
+                        title: "SuccessFully Updated",
+                        icon: "success",
+                        color: "#14532d",
+                        confirmButtonColor: "#14532d",
+                        confirmButtonText: "Okey",
+                        showClass: {
+                            popup: `
                     animate__animated
                     animate__fadeInUp
                     animate__faster
                   `
-                },
-                hideClass: {
-                  popup: `
+                        },
+                        hideClass: {
+                            popup: `
                     animate__animated
                     animate__fadeOutDown
                     animate__faster
                   `
-                }
-                })
-            )
-            
-            navigate(from, { replace: true });
-            
-        })
+                        }
+                    })
+                )
+
+                navigate(from, { replace: true });
+
+            })
             .then((data) => console.log(data));
     };
     console.log(handleUpdateRecipe);

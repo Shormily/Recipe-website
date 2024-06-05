@@ -32,11 +32,12 @@ const Sidebar = () => {
     };
     const menus = [
         { name: "Dashboard", link: "/dashboard", icon: MdOutlineDashboard },
-        { name: "Manage All Orders", link: "/dashboard/manage-recipes", icon: FiMessageSquare },
-        { name: "Add Cards", link: "/dashboard/add-recipes", icon: AiOutlineUser },
-        { name: "Analytics", icon: TbReportAnalytics, margin: true },
-        { name: "Home", link: "/", icon: FiShoppingCart },
-        { name: "File Manager", icon: FiFolder },
+        { name: "Profile", link:"/dashboard/profile",  icon: TbReportAnalytics, },
+        { name: "Manage All Orders", link: "/dashboard/manage-recipes", icon: FiMessageSquare,  },
+        { name: "Add Cards", link: "/dashboard/add-recipes", icon: FiShoppingCart, margin: true},
+       
+        { name: "Home", link: "/", icon: AiOutlineUser },
+        { name: "profile-edit", icon: FiFolder ,margin: true},
         { name: "Saved", icon: AiOutlineHeart, },
 
     ];
@@ -121,7 +122,7 @@ const Sidebar = () => {
                                     <Link
                                         onClick={logOut}
 
-                                        to={"/register"}
+                                        to={"/rerom"}
                                         className="flex"
 
                                     >

@@ -242,7 +242,7 @@ const Naves = () => {
                                 <Link
                                     onClick={logOut}
                                     className="flex justify-between hover:opacity-50 "
-                                    to={"/register"}
+                                    to={"/rerom"}
 
                                 >
                                     SignOut
@@ -344,7 +344,7 @@ const Naves = () => {
                                 <Link
                                     onClick={logOut}
                                     className="flex justify-between hover:opacity-50 "
-                                    to={"/register"}
+                                    to={"/rerom"}
 
                                 >
                                     SignOut
