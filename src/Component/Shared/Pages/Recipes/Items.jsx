@@ -80,7 +80,7 @@ const Items = () => {
           "id": "4",
           "title": "Cold Cofee",
           "price": "7.99",
-          "image": "https://i.ibb.co/g9BvpSw/dish-17.jpg",
+          "image": "https://i.ibb.co/qgt4rCX/dish-14.jpg",
           "category": "French",
          
         },

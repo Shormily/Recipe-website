@@ -1,6 +1,6 @@
 
 import "./Footer.css";
-import Shelf from "./Sliders/Shelf";
+
 
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       {/* <JoinOur/> */}
       {/* Footer Section */}
-      {/* <Shelf/> */}
+     
       <div className="bg-[#a16207] justify-center items-center flex  font-inriaSans pt-12 pb-8 ">
         <div
           className="max-w-[1550px] justify-center items-center m-auto px-6  pt-12 pb-8

@@ -5,6 +5,15 @@
     justify-content: center;
    
   }
+  .nav-link:hover.active {
+    background-color: #a16207;
+    color: #ffffff !important;
+   
+   
+  }
+  .active {
+    color: red;
+  }
   .nav-link::after {
     content:"";
     position:absolute;

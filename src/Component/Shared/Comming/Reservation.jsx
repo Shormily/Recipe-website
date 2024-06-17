@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Naves from "../Navbars/Naves";
 import Footer from "../Footer";
+import Shelf from "../Sliders/Shelf";
 
 
 const Reservation = () => {
@@ -191,7 +192,7 @@ const Reservation = () => {
           </>
           ))}
             </div></div>
-            
+            <Shelf/>
             <Footer/>
         </>
     );

@@ -1,7 +1,8 @@
 import CountUp from "react-countup";
 import Naves from "../Navbars/Naves";
 import Footer from "../Footer";
-
+import Tab from "../Sliders/Tab";
+import 'animate.css';
 
 const Gallery = () => {
     const breakfasts = [
@@ -74,7 +75,7 @@ const Gallery = () => {
            
                 <div className="grid md:grid-cols-2 grid-cols-1 max-w-[1400px] m-auto">
                     
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 pb-5 ">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 pb-5 animate__animated animate__fadeInLeft ">
           {breakfasts?.map((breakfast) => (
           <>
              <div className="pt-3  flex">
@@ -98,7 +99,7 @@ const Gallery = () => {
           ))}
           
                 </div>
-                <div className="">
+                <div className="animate__animated animate__fadeInRight">
                       {/* Extra Important */}
             <div className="bg-white mx-5 ">
               <div className="ml-5"></div>
@@ -151,7 +152,7 @@ const Gallery = () => {
             </div>
             </div>
 
-            
+            <Tab/>
            <Footer/>
             
         </>
