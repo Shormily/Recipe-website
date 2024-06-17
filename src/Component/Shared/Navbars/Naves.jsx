@@ -36,14 +36,14 @@ const Naves = () => {
             <div className="w-full px-2 p-2  naves banner-text  justify-center sticky  top-0 bg-[#fff]    flex  shadow-lg   items-center  z-20 text-slate-950 font-semibold ">
                 <Link
                     to={'/'}
-                    className="hover:opacity-50  cursor-default "
+                    className="hover:opacity-50  cursor-default flex "
                 >
                     <img
                         className="imgse"
-                        src="https://i.ibb.co/Y09bKbK/logo-4.png"
+                        src="https://i.ibb.co/G9xjbRZ/sa.png"
                         alt=""
                     />
-
+                   <p className="justify-center items-center m-auto text-3xl font-medium ">hanGrila</p>
                 </Link>
                 <React.Fragment>
                     <ul className="hidden   lg:pl-32 md:pl-4 sm:pl-2 sm:flex p-4">

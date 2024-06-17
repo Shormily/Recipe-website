@@ -91,54 +91,7 @@ const Recipe = () => {
          
           </>
           ))}
-            {/* Extra Important */}
-            {/* <div className="bg-white mx-5 ">
-              <div className="ml-5"></div>
-              <p className="text-center ft-text text-[13px] mt-12">
-                SMART BY THE NUMBER
-              </p>
-              <div className="max-w-[70px] m-auto pt-5">
-                <div
-                  style={{
-                    justifyContent: "center",
-                    alignItems: "center",
-                    backgroundColor: "#7f1d1d",
-                    height: "1px",
-                    marginBottom: "30px",
-                  }}
-                />
-              </div>
-              <div>
-                <p className="text-5xl study-num  text-center text-[#002147]">
-                  <CountUp end={89} duration={90} className="countup-font" />%
-                </p>
-                <p className=" text-center study-num">of class of 2014</p>
-                <p className="text-center text-gray-400 ft-text text-[13px]">
-                  bachelor’s recipients were <br /> employed
-                </p>
-              </div>
-              <div className="pt-12">
-                <p className="text-5xl study-num  text-center text-[#002147]">
-                  <CountUp end={89} duration={90} className="countup-font" />%
-                </p>
-                <p className=" text-center study-num">of employed 2014</p>
-                <p className="text-center text-gray-400 ft-text text-[13px]">
-                  graduates hold a position <br /> related to their degree
-                </p>
-              </div>
-              <div className="pt-12 pb-8 ">
-                <p className="text-5xl study-num  text-center text-[#002147]">
-                  <CountUp end={3042} duration={90} className="countup-font" />%
-                </p>
-                <p className=" text-center study-num">students</p>
-                <p className="text-center text-gray-400 ft-text text-[13px] pb-8">
-                  overall student-athlete <br /> GPA for Spring 2016{" "}
-                </p>
-              </div>
-            </div>  */}
-            {/* Extra important end */}
-
-
+            
         </div>
       
           

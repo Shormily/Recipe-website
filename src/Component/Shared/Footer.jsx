@@ -1,5 +1,6 @@
 
 import "./Footer.css";
+import Shelf from "./Sliders/Shelf";
 
 
 const Footer = () => {
@@ -7,6 +8,7 @@ const Footer = () => {
     <>
       {/* <JoinOur/> */}
       {/* Footer Section */}
+      <Shelf/>
       <div className="bg-[#a16207] justify-center items-center flex  font-inriaSans pt-12 pb-8 ">
         <div
           className="max-w-[1550px] justify-center items-center m-auto px-6  pt-12 pb-8
@@ -15,11 +17,13 @@ const Footer = () => {
           {/* max-w-[1120px] m-auto pt-3 pb-3  flex items-center justify-between mx-auto */}
           <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-24  ">
             <div className="text-white">
-              <img
+              <div className="flex">  <img
                 className="imgse text-white"
-                src="https://i.ibb.co/vwtrYzc/footer-logo.png"
+                src="https://i.ibb.co/nnxqFJR/footer-logo-1.png"
                 alt=""
               />
+              <p className=" text-3xl font-medium mt-3 ">hanGrila</p></div>
+            
               <p className="py-2 text-[18px] font-light text-gray-200 ">
                 Experience the joy of endless possibilities – one click at a
                 time. Welcome to a world where happiness is just a box away.
@@ -73,6 +77,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };
