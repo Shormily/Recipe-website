@@ -56,7 +56,7 @@ const Recipe = () => {
   return (
     <>
 
-      <div className=" pt-20 pb-12">
+      <div className=" md:pt-20 sm:pt-0 pb-12">
         <h1 className='text-4xl font-bold text-center mt-5 pt-4'>Delicious Breakfast</h1>
         <img
                 className=" justify-center items-center flex m-auto py-3"

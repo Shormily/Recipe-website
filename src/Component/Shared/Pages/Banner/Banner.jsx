@@ -28,7 +28,7 @@ const Banner = () => {
 
 
           </div>
-          <div className=" p-5 lg:mt-[-400px] md:mt-[-550px]  sm:mt-[-750px] mt-[-550px]  cont-pra text-white text-center texteras ">
+          <div className="  pt-8 lg:mt-[-400px] md:mt-[-550px]  sm:mt-[-750px] mt-[-550px]  cont-pra text-white text-center texteras ">
             <p >
               <TypeAnimation
                 sequence={[
@@ -48,14 +48,8 @@ const Banner = () => {
                 className="md:text-6xl text-2xl text-white "
               />
             </p>
-            <h1 className="justify-center items-center m-auto pt-5 ">shangrila Cafe & Restaurant, & Awesome Coffee,  Italian Pizza With Cherry
-             </h1>
-            <h1 className="justify-center items-center m-auto  ">Tomatoes and Green Basil, With special breakfast
-             </h1>
-            <h1 className=" hidden lg:block justify-center items-center m-auto  ">
-                 dinner and lunch awesome Offers.
-            
-             </h1>
+            <h1 className="justify-center hidden lg:block items-center m-auto pt-5 ">shangrila Cafe & Restaurant, & Awesome Coffee,  Italian Pizza With Cherry
+              <br /> Tomatoes and Green Basil, With special breakfast  dinner<br /> and lunch awesome Offers.</h1>
             <div className="cursor-pointer"><button className="bg-[#14532d] px-8  cursor-pointer  py-4 my-10 text-sm font-bold text-[#fff] hover:bg-[#000] hover:text-[#fff]">
               MORE ABOUT US
             </button></div>
@@ -74,7 +68,7 @@ const Banner = () => {
             <div className=" ">
               <p className="text-center mt-12 justify-center m-auto items-center text-5xl text-white font-bold">ENJOY THE BEST</p>
 
-              <p className="text-center text-white text-[20px] pt-5 px-2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat<br />
+              <p className="text-center text-white text-[20px] pt-5">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat<br />
                 ipsum nec sagittis sem nibhad elit duis sed odio sit amet nibh sulp.</p>
               <div className="justify-center items-center m-auto flex mt-8">
                 <button className="relative  inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-semibold text-gray-900  group bg-gradient-to-br from-green-800 to-green-700 group-hover:from-teal-300 group-hover:to-lime-900 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">

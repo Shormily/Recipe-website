@@ -26,8 +26,8 @@ const Contact = () => {
           </div>
 
         </div>
-        <div className="mt-[-120px]   bg-white shadow-lg max-w-[1300px] m-auto">
-          <div className="py-24 px-24 mb-24">
+        <div className="mt-[-120px] bg-white shadow-lg md:max-w-[1300px] sm:w-full m-auto">
+          <div className="py-24 md:px-24 sm:mx-6 mb-24">
             <div className=""> <h1 className="text-center font-medium text-5xl ">Send Your Message</h1>
               <img
                 className=" justify-center items-center flex m-auto pt-3"
@@ -41,10 +41,10 @@ const Contact = () => {
             <form
 
             >
-              <div id="contact" className=" max-w-[1240px] m-auto">
+              <div id="contact" className=" md:max-w-[1240px] sm:w-full m-auto">
 
 
-                <div className="lg:col-span-2 md:col-span-1  mx-3    animate__animated animate__fadeInRight">
+                <div className="lg:col-span-2 md:col-span-1  mx-1    animate__animated animate__fadeInRight">
                   <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
                     <div className="w-full mt-2  ">
                       <label
