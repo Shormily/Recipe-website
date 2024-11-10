@@ -142,7 +142,7 @@ const Login = () => {
   return (
     <>
     <Naves/>
-      <div className="max-w-[500px]  m-auto py-5 ">
+      <div className="max-w-[500px]  m-auto py-5 px-2">
                 <h1 className="text-center font-bold text-3xl py-4">Log In</h1>
               
                 <div >

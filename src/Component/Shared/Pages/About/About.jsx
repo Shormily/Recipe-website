@@ -14,7 +14,7 @@ const About = () => {
                 <div className=" ">
                     <p className="text-center mt-12 justify-center m-auto items-center text-5xl text-white font-bold">About US</p>
 
-                    <p className="text-center text-white text-[20px] pt-5">Our restaurant was established in 1990.  It has been in operation   years. <br /> We have beenproviding food service to everyone. We keep  <br />a variety of food in our Beef US restaurant. </p>
+                    <p className="text-center text-white text-[20px] pt-5 px-2">Our restaurant was established in 1990.  It has been in operation   years. <br /> We have beenproviding food service to everyone. We keep  <br />a variety of food in our Beef US restaurant. </p>
                     <div className="justify-center items-center m-auto flex mt-8">
                     </div>
 
@@ -44,7 +44,7 @@ const About = () => {
                 <div className="grid lg:grid-cols-2 gap-24 py-12  max-w-[1500px] m-auto ">
 
 
-                    <div className=" my-12 items-center justify-center m-auto">
+                    <div className=" my-12 items-center justify-center m-auto px-4">
                         <TypeAnimation
                             sequence={[
                                 // Same substring at the start will only be typed out once, initially
@@ -62,7 +62,7 @@ const About = () => {
                             className="text-4xl font-semibold py-4 text-[#14532d] "
                         />
 
-                        <p className="text-base" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p className="text-base " >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
                     <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 py-2">
                         <img
@@ -88,7 +88,7 @@ const About = () => {
 
                 <div className="justify-center items-center flex max-w-[1500px] m-auto py-8 text-white">
                     <div className="grid lg:grid-cols-2 text-center md:grid-cols-1 sm:grid-cols-1 gap-24 mt-8 mb-4">
-                        <div className="text-justify pt-8 ">
+                        <div className="text-justify pt-8 px-4">
                             <p className="font-bold text-2xl">Let’s talk about some work Team.</p>
                             <p>Lorem ipsum dolor sit amet edit, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 

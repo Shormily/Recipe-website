@@ -78,7 +78,7 @@ const Profile = () => {
             "id": "5",
             "title": "Tikkia chop",
             "price": "13.99",
-            "image": "https://www.kworldnow.com/wp-content/uploads/2021/08/Korean-desserts-2-1024x576.jpg ",
+            "image": "https://i.ibb.co/nCcQbFf/WK36-Lamb-small.png",
 
         },
         {

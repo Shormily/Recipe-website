@@ -64,7 +64,7 @@ const Gallery = () => {
                 <div className=" ">
                     <p className="text-center mt-12 justify-center m-auto items-center text-5xl text-white font-bold">Gallery</p>
 
-                    <p className="text-center text-white text-[20px] pt-5">Our restaurant was established in 1990.  It has been in operation   years. <br /> We have beenproviding food service to everyone. We keep  <br />a variety of food in our Beef US restaurant. </p>
+                    <p className="text-center text-white text-[20px] pt-5 px-3">Our restaurant was established in 1990.  It has been in operation   years. <br /> We have beenproviding food service to everyone. We keep  <br />a variety of food in our Beef US restaurant. </p>
                     <div className="justify-center items-center m-auto flex mt-8">
                     </div>
 
@@ -75,7 +75,7 @@ const Gallery = () => {
            
                 <div className="grid md:grid-cols-2 grid-cols-1 max-w-[1400px] m-auto">
                     
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 pb-5 animate__animated animate__fadeInLeft ">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 pb-5 px-2 animate__animated animate__fadeInLeft ">
           {breakfasts?.map((breakfast) => (
           <>
              <div className="pt-3  flex">

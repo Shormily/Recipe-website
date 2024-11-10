@@ -44,14 +44,14 @@ export default function Login() {
   return (
     <>
       <Naves />
-      <div className="py-5 pb-5">
+      <div className="py-5 pb-5 ">
         <div className=" py-5">
           <h1 className="text-center font-bold text-3xl py-4">Register Now</h1>
-          <div className="flex justify-center">
+          <div className="flex justify-center px-2">
 
-            <div className="card shrink-0 w-full max-w-md shadow-2xl py-3 pt-3 bg-base-100 px-4">
-              <form className="card-body" >
-                <div className="form-control">
+            <div className="card shrink-0 w-full  max-w-md shadow-2xl py-3 pt-3 bg-base-100 px-4">
+              <form className="card-body px-2" >
+                <div className="form-control px-2">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
